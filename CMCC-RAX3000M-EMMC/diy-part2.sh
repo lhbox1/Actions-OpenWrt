@@ -14,40 +14,36 @@
 sed -i 's/192.168.1.1/192.168.15.1/g' package/base-files/files/bin/config_generate
 ##-----------------Add OpenClash dev core------------------
 
-export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
-export CORE_TUN=https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux
-export CORE_DEV=https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux
-export CORE_MATE=https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux
-
-export CORE_TYPE=$(echo $OWRT_TARGET | grep -Eiq "64|86" && echo "amd64" || echo "arm64")
-export TUN_VER=$(curl -sfL $CORE_VER | sed -n "2{s/\r$//;p;q}")
-
-export GEO_MMDB=https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
-export GEO_SITE=https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
-export GEO_IP=https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz -o /tmp/clash1.tar.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz -o /tmp/clash2.tar.gz
 
 
+mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
 
-mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash
 
-cd ./feeds/luci/applications/luci-app-openclash/root/etc/openclash
+tar zxvf /tmp/clash1.tar.gz -C /tmp >/dev/null 2>&1
+mv /tmp/a/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
 
-curl -sfL -o ./Country.mmdb $GEO_MMDB
-curl -sfL -o ./GeoSite.dat $GEO_SITE
-curl -sfL -o ./GeoIP.dat $GEO_IP
+tar zxvf /tmp/clash2.tar.gz -C /tmp >/dev/null 2>&1
+mv /tmp/clash-linux-arm64-2023.08.17-13-gdcc8d87 /feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_tun >/dev/null 2>&1
 
-mkdir ./core && cd ./core
+tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 
-curl -sfL -o ./tun.gz "$CORE_TUN"-"$CORE_TYPE"-"$TUN_VER".gz
-gzip -d ./tun.gz && mv ./tun ./clash_tun
+mv /tmp/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash >/dev/null 2>&1
 
-curl -sfL -o ./meta.tar.gz "$CORE_MATE"-"$CORE_TYPE".tar.gz
-tar -zxf ./meta.tar.gz && mv ./clash ./clash_meta
+chmod +x feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash* >/dev/null 2>&1
 
-curl -sfL -o ./dev.tar.gz "$CORE_DEV"-"$CORE_TYPE".tar.gz
-tar -zxf ./dev.tar.gz
 
-chmod +x ./clash* ; rm -rf ./*.gz
+rm -rf /tmp/*.gz >/dev/null 2>&1
+
+
+curl -sL -m 30 --retry 2 https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/Country.mmdb
+curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/geosite.dat
+curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/geoip.dat
+
+
+
 
 
 ##-----------------Delete DDNS's examples-----------------
