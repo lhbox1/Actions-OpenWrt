@@ -23,7 +23,7 @@ mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
 
 
 tar zxvf /tmp/clash1.tar.gz -C /tmp >/dev/null 2>&1
-mv /tmp/a/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
+mv /tmp/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
 
 tar zxvf /tmp/clash2.tar.gz -C /tmp >/dev/null 2>&1
 mv /tmp/clash-linux-arm64-2023.08.17-13-gdcc8d87 /feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_tun >/dev/null 2>&1
@@ -41,7 +41,6 @@ rm -rf /tmp/*.gz >/dev/null 2>&1
 curl -sL -m 30 --retry 2 https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/Country.mmdb
 curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/geosite.dat
 curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/geoip.dat
-
 
 
 
