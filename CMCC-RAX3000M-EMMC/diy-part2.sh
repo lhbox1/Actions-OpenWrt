@@ -26,7 +26,7 @@ tar zxvf /tmp/clash1.tar.gz -C /tmp >/dev/null 2>&1
 mv /tmp/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
 
 tar zxvf /tmp/clash2.tar.gz -C /tmp >/dev/null 2>&1
-mv /tmp/clash-linux-arm64-2023.08.17-13-gdcc8d87 /feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_tun >/dev/null 2>&1
+mv /tmp/clash-linux-arm64-2023.08.17-13-gdcc8d87 feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_tun >/dev/null 2>&1
 
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 
