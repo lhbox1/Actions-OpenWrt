@@ -38,9 +38,9 @@ chmod +x feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clas
 rm -rf /tmp/*.gz >/dev/null 2>&1
 
 
-curl -sL -m 30 --retry 2 https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/Country.mmdb
-curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/geosite.dat
-curl -sL -m 30 --retry 2 https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/geoip.dat
+curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash Country.mmdb https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
+curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
+curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
 
 
 
