@@ -44,6 +44,11 @@ on:
         required: true
         default: true
         type: boolean
+      MASTER_PASSWALL:
+        description: '编译仓库luci-app-passwall源码'
+        required: true
+        default: true
+        type: boolean
       ssh:
         description: 'SSH connection to Actions'
         required: false
@@ -127,6 +132,12 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$CLASH_SH
         echo "MASTER_OPENCLASH=-master_openclash" >> $GITHUB_ENV
+
+    - name: 加载 PASSWALL
+      if: github.event.inputs.MASTER_PASSWALL == 'true'
+      run: |
+        cd openwrt
+        echo "MASTER_OPENCLASH=-master_passwall" >> $GITHUB_ENV
         
     - name: 更新 & 安装 feeds
       run: |
