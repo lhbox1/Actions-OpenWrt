@@ -45,7 +45,7 @@ on:
         default: true
         type: boolean
       MASTER_PASSWALL:
-        description: '编译仓库luci-app-passwall源码'
+        description: '编译xiaorouji仓库luci-app-passwall源码'
         required: true
         default: true
         type: boolean
@@ -137,7 +137,7 @@ jobs:
       if: github.event.inputs.MASTER_PASSWALL == 'true'
       run: |
         cd openwrt
-        echo "MASTER_OPENCLASH=-master_passwall" >> $GITHUB_ENV
+        echo "MASTER_OPENCLASH=-main_openwrt-passwall" >> $GITHUB_ENV
         
     - name: 更新 & 安装 feeds
       run: |
