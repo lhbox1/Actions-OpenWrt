@@ -86,22 +86,23 @@ rm -rf OpenClash-master
 rm -rf temp.zip
 
 #kenzok8下载使用master版本
-#https://github.com/xiaorouji/openwrt-passwall/archive/main.zip
-wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
+wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp2.zip
+#wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
 unzip -q temp2.zip
-cp -r small-master/luci-app-ssr-plus package/
-cp -r small-master/luci-app-passwall package/
-cp -r small-master/luci-app-passwall2 package/
-cp -r small-master/dns2socks package/
-cp -r small-master/dns2tcp package/
-cp -r small-master/v2dat package/
-cp -r small-master/xray-core package/
-cp -r small-master/chinadns-ng package/
-#cp -r small-master/sing-box package/
-cp -r small-master/luci-app-mosdns package/
-cp -r small-master/mosdns package/
 
-rm -rf small-master
+#cp -r small-master/luci-app-ssr-plus package/
+cp -r openwrt-passwall-main/luci-app-passwall package/
+#cp -r small-master/luci-app-passwall2 package/
+#cp -r small-master/dns2socks package/
+#cp -r small-master/dns2tcp package/
+#cp -r small-master/v2dat package/
+#cp -r small-master/xray-core package/
+#cp -r small-master/chinadns-ng package/
+#cp -r small-master/sing-box package/
+#cp -r small-master/luci-app-mosdns package/
+#cp -r small-master/mosdns package/
+
+#rm -rf small-master
 rm -rf temp2.zip
 
 
