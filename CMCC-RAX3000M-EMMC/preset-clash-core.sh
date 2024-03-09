@@ -86,7 +86,7 @@ rm -rf OpenClash-master
 rm -rf temp.zip
 
 #kenzok8下载使用master版本
-https://github.com/xiaorouji/openwrt-passwall/archive/main.zip
+#https://github.com/xiaorouji/openwrt-passwall/archive/main.zip
 wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 cp -r small-master/luci-app-ssr-plus package/
