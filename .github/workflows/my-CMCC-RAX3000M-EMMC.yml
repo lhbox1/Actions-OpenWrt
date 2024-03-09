@@ -40,7 +40,7 @@ on:
         default: false
         type: boolean
       MASTER_OPENCLASH:
-        description: '编译vernesong仓库luci-app-openclash源码'
+        description: '编译魔法源码'
         required: true
         default: true
         type: boolean
@@ -120,7 +120,7 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
-    - name: 加载 CLASH_SH
+    - name: 加载魔法源码
       if: github.event.inputs.MASTER_OPENCLASH == 'true'
       run: |
         chmod +x $CLASH_SH
