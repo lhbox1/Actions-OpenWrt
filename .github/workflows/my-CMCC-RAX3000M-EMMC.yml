@@ -44,11 +44,6 @@ on:
         required: true
         default: true
         type: boolean
-      MAIN_PASSWALL:
-        description: '编译xiaorouji仓库luci-app-passwall源码'
-        required: true
-        default: true
-        type: boolean
       ssh:
         description: 'SSH connection to Actions'
         required: false
@@ -132,12 +127,6 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$CLASH_SH
         echo "MASTER_OPENCLASH=-master_openclash" >> $GITHUB_ENV
-
-    - name: 加载 PASSWALL
-      if: github.event.inputs.MAIN_PASSWALL == 'true'
-      run: |
-        cd openwrt
-        echo "MAIN_PASSWALL=-main_openwrt-passwall" >> $GITHUB_ENV
         
     - name: 更新 & 安装 feeds
       run: |
