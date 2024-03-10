@@ -87,15 +87,13 @@ rm -rf temp.zip
 
 #kenzok8下载使用master版本
 wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
-
-wget  -qO- https://github.com/xiaorouji/openwrt-passwall2/archive/main.zip > temp2.zip
-wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
-
-#wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp4.zip
 unzip -q temp1.zip
+wget  -qO- https://github.com/xiaorouji/openwrt-passwall2/archive/main.zip > temp2.zip
 unzip -q temp2.zip
+wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
 unzip -q temp3.zip
 
+#wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp4.zip
 #cp -r small-master/luci-app-ssr-plus package/
 
 cp -r openwrt-passwall-main/luci-app-passwall package/
@@ -105,7 +103,7 @@ cp -r openwrt-passwall-packages-main/dns2tcp package/
 cp -r openwrt-passwall-packages-main/xray-core package/
 cp -r openwrt-passwall-packages-main/chinadns-ng package/
 cp -r openwrt-passwall-packages-main/sing-box package/
-cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
+#cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
 cp -r openwrt-passwall-packages-main/microsocks package/
 
 
@@ -116,10 +114,11 @@ cp -r openwrt-passwall-packages-main/microsocks package/
 
 rm -rf openwrt-passwall2-main
 rm -rf openwrt-passwall-main
+rm -rf openwrt-passwall-packages-main
 rm -rf temp1.zip
 rm -rf temp2.zip
 rm -rf temp3.zip
-rm -rf openwrt-passwall-packages-main
+
 
 
 #下载使用dev版本openclash
