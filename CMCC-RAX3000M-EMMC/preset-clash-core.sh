@@ -97,12 +97,12 @@ wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp4.zip
 #cp -r small-master/luci-app-ssr-plus package/
 
 cp -r openwrt-passwall-main/luci-app-passwall package/
-cp -r openwrt-passwall2-main/luci-app-passwall2 package/
+#cp -r openwrt-passwall2-main/luci-app-passwall2 package/
 cp -r openwrt-passwall-packages-main/dns2socks package/
 cp -r openwrt-passwall-packages-main/dns2tcp package/
 cp -r openwrt-passwall-packages-main/xray-core package/
 cp -r openwrt-passwall-packages-main/chinadns-ng package/
-cp -r openwrt-passwall-packages-main/sing-box package/
+#cp -r openwrt-passwall-packages-main/sing-box package/
 #cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
 cp -r openwrt-passwall-packages-main/microsocks package/
 
