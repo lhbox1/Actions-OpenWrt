@@ -116,7 +116,9 @@ cp -r small-master/mosdns package/
 cp -r small-master/v2dat package/
 
 
-cp -r small-master/luci-app-passwall2 package/
+#cp -r small-master/luci-app-passwall2 package/
+#cp -r small-master/sing-box package/
+
 #cp -r small-master/dns2socks package/
 #cp -r small-master/dns2tcp package/
 cp -r small-master/xray-core package/
