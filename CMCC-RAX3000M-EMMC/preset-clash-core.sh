@@ -112,7 +112,7 @@ cp -r small-master/luci-app-ssr-plus package/
 
 
 cp -r small-master/luci-app-mosdns package/
-cp -r small-master/mosdns package/
+#cp -r small-master/mosdns package/
 cp -r small-master/v2dat package/
 
 
@@ -121,8 +121,8 @@ cp -r small-master/v2dat package/
 
 #cp -r small-master/dns2socks package/
 #cp -r small-master/dns2tcp package/
-cp -r small-master/xray-core package/
-cp -r small-master/chinadns-ng package/
+#cp -r small-master/xray-core package/
+#cp -r small-master/chinadns-ng package/
 
 rm -rf temp2.zip
 rm -rf small-master
@@ -133,13 +133,13 @@ wget  -qO- https://github.com/kenzok8/openwrt-packages/archive/master.zip > temp
 unzip -q temp3.zip
 
 cp -r openwrt-packages-master/luci-app-adguardhome package/
-cp -r openwrt-packages-master/adguardhome package/
-#cp -r openwrt-packages-master/luci-app-alist package/
+#cp -r openwrt-packages-master/adguardhome package/
+cp -r openwrt-packages-master/luci-app-alist package/
 #cp -r openwrt-packages-master/alist package/
 cp -r openwrt-packages-master/luci-app-ddns-go package/
-cp -r openwrt-packages-master/ddns-go package/
+#cp -r openwrt-packages-master/ddns-go package/
 cp -r openwrt-packages-master/luci-app-smartdns package/
-cp -r openwrt-packages-master/smartdns package/
+#cp -r openwrt-packages-master/smartdns package/
 
 rm -rf temp3.zip
 rm -rf openwrt-packages-master
