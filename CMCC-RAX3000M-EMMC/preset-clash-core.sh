@@ -85,18 +85,69 @@ cp -r OpenClash-master/luci-app-openclash package/
 rm -rf OpenClash-master
 rm -rf temp.zip
 
-#下载使用master版本
+
+#下载使用master版本alist
+wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
+unzip -q alist.zip
+cp -r luci-app-alist-master/luci-app-alist package/
+cp -r luci-app-alist-master/alist package/
+rm -rf luci-app-alist-master
+rm -rf alist.zip
+
+
+
+#下载使用master版本passwall
 wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
 unzip -q temp1.zip
-#wget  -qO- https://github.com/xiaorouji/openwrt-passwall2/archive/main.zip > temp2.zip
-#unzip -q temp2.zip
-#wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
-#unzip -q temp3.zip
-
-wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp4.zip
-unzip -q temp4.zip
-
 cp -r openwrt-passwall-main/luci-app-passwall package/
+rm -rf temp1.zip
+rm -rf openwrt-passwall-main
+
+
+
+#下载使用passwall依赖kenzok8/small库
+wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
+unzip -q temp2.zip
+cp -r small-master/luci-app-ssr-plus package/
+
+
+cp -r small-master/luci-app-mosdns package/
+cp -r small-master/mosdns package/
+cp -r small-master/v2dat package/
+
+
+cp -r small-master/luci-app-passwall2 package/
+#cp -r small-master/dns2socks package/
+#cp -r small-master/dns2tcp package/
+cp -r small-master/xray-core package/
+cp -r small-master/chinadns-ng package/
+
+rm -rf temp2.zip
+rm -rf small-master
+
+#插件库kenzok8/openwrt-packages
+
+wget  -qO- https://github.com/kenzok8/openwrt-packages/archive/master.zip > temp3.zip
+unzip -q temp3.zip
+
+cp -r openwrt-packages-master/luci-app-adguardhome package/
+cp -r openwrt-packages-master/adguardhome package/
+#cp -r openwrt-packages-master/luci-app-alist package/
+#cp -r openwrt-packages-master/alist package/
+cp -r openwrt-packages-master/luci-app-ddns-go package/
+cp -r openwrt-packages-master/ddns-go package/
+cp -r openwrt-packages-master/luci-app-smartdns package/
+cp -r openwrt-packages-master/smartdns package/
+
+rm -rf temp3.zip
+rm -rf openwrt-packages-master
+
+
+
+#备用
+#wget  -qO- https://github.com/xiaorouji/openwrt-passwall2/archive/main.zip > temp2.zip
+#wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
+
 #cp -r openwrt-passwall2-main/luci-app-passwall2 package/
 #cp -r openwrt-passwall-packages-main/dns2socks package/
 #cp -r openwrt-passwall-packages-main/dns2tcp package/
@@ -106,22 +157,10 @@ cp -r openwrt-passwall-main/luci-app-passwall package/
 #cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
 #cp -r openwrt-passwall-packages-main/microsocks package/
 
-
-cp -r small-master/luci-app-ssr-plus package/
-cp -r small-master/v2dat package/
-cp -r small-master/luci-app-mosdns package/
-cp -r small-master/mosdns package/
-
 #rm -rf openwrt-passwall2-main
-rm -rf openwrt-passwall-main
 #rm -rf openwrt-passwall-packages-main
-rm -rf temp1.zip
+
 #rm -rf temp2.zip
-#rm -rf temp3.zip
-
-rm -rf temp4.zip
-rm -rf small-master
-
 
 
 #下载使用dev版本openclash
