@@ -134,7 +134,7 @@ unzip -q temp3.zip
 
 cp -r openwrt-packages-master/luci-app-adguardhome package/
 #cp -r openwrt-packages-master/adguardhome package/
-cp -r openwrt-packages-master/luci-app-alist package/
+#cp -r openwrt-packages-master/luci-app-alist package/
 #cp -r openwrt-packages-master/alist package/
 cp -r openwrt-packages-master/luci-app-ddns-go package/
 #cp -r openwrt-packages-master/ddns-go package/
