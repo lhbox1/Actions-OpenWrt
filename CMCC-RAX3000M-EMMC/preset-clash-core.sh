@@ -85,17 +85,6 @@ cp -r OpenClash-master/luci-app-openclash package/
 rm -rf OpenClash-master
 rm -rf temp.zip
 
-
-#下载使用master版本alist
-wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
-unzip -q alist.zip
-cp -r luci-app-alist-master/luci-app-alist package/
-cp -r luci-app-alist-master/alist package/
-rm -rf luci-app-alist-master
-rm -rf alist.zip
-
-
-
 #下载使用master版本passwall
 wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
 unzip -q temp1.zip
@@ -110,9 +99,8 @@ wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 cp -r small-master/luci-app-ssr-plus package/
 
-
 cp -r small-master/luci-app-mosdns package/
-#cp -r small-master/mosdns package/
+cp -r small-master/mosdns package/
 cp -r small-master/v2dat package/
 
 
