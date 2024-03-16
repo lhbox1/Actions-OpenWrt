@@ -115,22 +115,15 @@ cp -r small-master/v2dat package/
 rm -rf temp2.zip
 rm -rf small-master
 
-#插件库kenzok8/openwrt-packages
+#插件库
 
-wget  -qO- https://github.com/kenzok8/openwrt-packages/archive/master.zip > temp3.zip
+wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
 unzip -q temp3.zip
 
-cp -r openwrt-packages-master/luci-app-adguardhome package/
-#cp -r openwrt-packages-master/adguardhome package/
-#cp -r openwrt-packages-master/luci-app-alist package/
-#cp -r openwrt-packages-master/alist package/
-cp -r openwrt-packages-master/luci-app-ddns-go package/
-#cp -r openwrt-packages-master/ddns-go package/
-cp -r openwrt-packages-master/luci-app-smartdns package/
-#cp -r openwrt-packages-master/smartdns package/
+cp -r pakg-main/luci-app-adguardhome package/
 
 rm -rf temp3.zip
-rm -rf openwrt-packages-master
+rm -rf pakg-main
 
 
 
