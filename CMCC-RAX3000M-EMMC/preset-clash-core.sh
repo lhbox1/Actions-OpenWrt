@@ -101,7 +101,6 @@ cp -r small-master/luci-app-ssr-plus package/
 cp -r small-master/shadow-tls package/
 
 cp -r small-master/luci-app-mosdns package/
-cp -r small-master/mosdns package/
 cp -r small-master/v2dat package/
 
 rm -rf temp2.zip
