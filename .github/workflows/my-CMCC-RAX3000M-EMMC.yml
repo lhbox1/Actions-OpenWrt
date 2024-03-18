@@ -131,6 +131,16 @@ jobs:
     - name: 更新 & 安装 feeds
       run: |
         cd openwrt
+        #自定义
+        
+        cd /workdir/openwrt
+        echo >> feeds.conf.default
+        echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+        echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
+        ./scripts/feeds update istore
+        ./scripts/feeds install -d y -p istore luci-app-store
+        
+        
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
