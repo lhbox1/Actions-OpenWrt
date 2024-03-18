@@ -134,7 +134,6 @@ jobs:
         git clone  https://github.com/xiaorouji/openwrt-passwall2/tree/main/luci-app-passwall2 package/feeds/luci/luci-app-passwall2
         cd /workdir/openwrt
         echo >> feeds.conf.default
-        echo 'src-git kenzok8 https://github.com/kenzok8/openwrt-packages;master' >> feeds.conf.default
         echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
