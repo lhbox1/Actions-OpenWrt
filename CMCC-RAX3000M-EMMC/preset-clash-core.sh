@@ -95,16 +95,14 @@ rm -rf openwrt-passwall-main
 
 
 #下载使用passwall依赖kenzok8/small库
-wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
-unzip -q temp2.zip
-cp -r small-master/luci-app-ssr-plus package/
-cp -r small-master/shadow-tls package/
+#wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
+#unzip -q temp2.zip
 
-cp -r small-master/luci-app-mosdns package/
-cp -r small-master/v2dat package/
+#cp -r small-master/luci-app-ssr-plus package/
+#cp -r small-master/shadow-tls package/
 
-rm -rf temp2.zip
-rm -rf small-master
+#rm -rf temp2.zip
+#rm -rf small-master
 
 #插件库
 
@@ -112,6 +110,8 @@ wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
 unzip -q temp3.zip
 
 cp -r pakg-main/luci-app-adguardhome package/
+cp -r pakg-main/luci-app-mosdns package/
+cp -r pakg-main/v2dat package/
 
 rm -rf temp3.zip
 rm -rf pakg-main
