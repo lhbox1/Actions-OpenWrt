@@ -98,19 +98,11 @@ rm -rf openwrt-passwall-main
 wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 cp -r small-master/luci-app-ssr-plus package/
+cp -r small-master/shadow-tls package/
 
 cp -r small-master/luci-app-mosdns package/
 cp -r small-master/mosdns package/
 cp -r small-master/v2dat package/
-
-
-#cp -r small-master/luci-app-passwall2 package/
-#cp -r small-master/sing-box package/
-
-#cp -r small-master/dns2socks package/
-#cp -r small-master/dns2tcp package/
-#cp -r small-master/xray-core package/
-#cp -r small-master/chinadns-ng package/
 
 rm -rf temp2.zip
 rm -rf small-master
