@@ -131,6 +131,7 @@ jobs:
     - name: 更新 & 安装 feeds
       run: |
         cd openwrt
+        git clone  https://github.com/shuishihan/luci-app-easymesh.git package/feeds/luci/luci-app-easymesh
         cd /workdir/openwrt
         echo >> feeds.conf.default
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
