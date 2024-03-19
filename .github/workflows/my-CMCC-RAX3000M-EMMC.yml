@@ -56,7 +56,7 @@ on:
 env:
   ###############手动修改##############
   OPENWRT_NAME: hanwckf
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
   DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
@@ -138,8 +138,10 @@ jobs:
         echo >> feeds.conf.default
         echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+        
         ./scripts/feeds update istore
         ./scripts/feeds install -d y -p istore luci-app-store
+        
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
