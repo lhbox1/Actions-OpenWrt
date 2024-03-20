@@ -144,6 +144,8 @@ jobs:
         
         ./scripts/feeds update istore
         ./scripts/feeds install -d y -p istore luci-app-store
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
         
         
         
