@@ -137,7 +137,7 @@ jobs:
         cd /workdir/openwrt
         echo >> feeds.conf.default
         #echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
-        echo 'https://github.com/kenzok8/small.git;master' >> feeds.conf.default
+        echo 'src-git https://github.com/kenzok8/small.git;master' >> feeds.conf.default
         echo 'src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git;master' >> feeds.conf.default
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
         
