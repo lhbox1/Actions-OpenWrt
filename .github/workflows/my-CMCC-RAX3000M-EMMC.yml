@@ -145,14 +145,15 @@ jobs:
         ./scripts/feeds update istore
         ./scripts/feeds install -d y -p istore luci-app-store
         
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
+        
         
     - name: 加载config & DIY_P2_SH
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
     - name: 使用原厂MAC地址顺序
