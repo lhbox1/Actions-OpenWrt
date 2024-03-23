@@ -113,6 +113,15 @@ cp -r pakg-main/v2dat package/
 rm -rf temp3.zip
 rm -rf pakg-main
 
+
+#下载使用sbwml版本alist
+wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
+unzip -q alist.zip
+cp -r luci-app-alist-master/luci-app-alist package/
+rm -rf alist.zip
+rm -rf luci-app-alist-master
+
+
 #备用
 #wget  -qO- https://github.com/xiaorouji/openwrt-passwall2/archive/main.zip > temp2.zip
 #wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
