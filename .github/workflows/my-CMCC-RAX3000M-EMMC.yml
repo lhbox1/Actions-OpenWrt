@@ -139,17 +139,23 @@ jobs:
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
         ./scripts/feeds update istore
         ./scripts/feeds install -d y -p istore luci-app-store
-        echo 'src-git lhpakg https://github.com/lhbox1/pakg;main' >> feeds.conf.default
-        echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
-        #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages;master' >> feeds.conf.default
-        #echo 'src-git small https://github.com/kenzok8/small;master' >> feeds.conf.default
+        echo 'src-git lhpakg https://github.com/lhbox1/pakg' >> feeds.conf.default
+        echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
+        #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >> feeds.conf.default
+        #echo 'src-git small https://github.com/kenzok8/small' >> feeds.conf.default
         ./scripts/feeds update -a
         #rm -rf feeds/packages/net/{alist,adguardhome,xray*,v2ray*,v2ray*,sing*,smartdns}
         rm -rf feeds/packages/lang/golang
         git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
         ./scripts/feeds install -a
         
-        
+    - name: 添加 Packages
+      run: |
+        cd ./wrt/package/
+
+        #$GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Packages.sh
+        #$GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Handles.sh
+
     - name: 加载config & DIY_P2_SH
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
