@@ -105,21 +105,21 @@ rm -rf openwrt-passwall-main
 #rm -rf small-master
 
 #插件库
-wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
-unzip -q temp3.zip
-cp -r pakg-main/luci-app-adguardhome package/
-cp -r pakg-main/luci-app-mosdns package/
-cp -r pakg-main/v2dat package/
-rm -rf temp3.zip
-rm -rf pakg-main
+#wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
+#unzip -q temp3.zip
+#cp -r pakg-main/luci-app-adguardhome package/
+#cp -r pakg-main/luci-app-mosdns package/
+#cp -r pakg-main/v2dat package/
+#rm -rf temp3.zip
+#rm -rf pakg-main
 
 
 #下载使用sbwml版本alist
-wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
-unzip -q alist.zip
-cp -r luci-app-alist-master/luci-app-alist package/
-rm -rf alist.zip
-rm -rf luci-app-alist-master
+#wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
+#unzip -q alist.zip
+#cp -r luci-app-alist-master/luci-app-alist package/
+#rm -rf alist.zip
+#rm -rf luci-app-alist-master
 
 
 #备用
