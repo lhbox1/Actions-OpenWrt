@@ -149,13 +149,6 @@ jobs:
         git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
         ./scripts/feeds install -a
         
-    - name: 添加 Packages
-      run: |
-        cd ./wrt/package/
-
-        #$GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Packages.sh
-        #$GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Handles.sh
-
     - name: 加载config & DIY_P2_SH
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
