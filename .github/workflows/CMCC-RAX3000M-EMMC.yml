@@ -56,6 +56,7 @@ env:
   CONFIG_FILE: CMCC-RAX3000M-EMMC/.mtwifi-cfg.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
   DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part2.sh
+  Plugins: CMCC-RAX3000M-EMMC/Plugins.sh
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -123,9 +124,11 @@ jobs:
     - name: 加载config & DIY_P2_SH
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P2_SH
+        chmod +x $DIY_P2_SH && chmod +x $Plugins
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        cd ./package
+        $GITHUB_WORKSPACE/$Plugins
         
     - name: 使用原厂MAC地址顺序
       if: github.event.inputs.MAC_ORDER == 'true'
