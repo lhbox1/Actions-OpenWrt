@@ -22,7 +22,7 @@
 
 #Open Clash
 
-git clone --depth=1 --single-branch --branch "master" https://github.com/vernesong/OpenClash.git
+git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
 
 #Pass Wall
 #git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git ./pw_luci
