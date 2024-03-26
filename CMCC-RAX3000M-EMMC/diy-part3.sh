@@ -23,3 +23,10 @@ sed -i 's/192.168.1.1/192.168.15.1/g' package/base-files/files/bin/config_genera
 sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 ##-----------------Manually set CPU frequency for MT7981B-----------------
 sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
+
+
+##添加软件包
+git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
+
+
+
