@@ -55,9 +55,9 @@ env:
   DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
   CONFIG_FILE: CMCC-RAX3000M-EMMC/.mtwifi-cfg.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
-  DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part2.sh
+  DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part3.sh
   
-  # Plugins: CMCC-RAX3000M-EMMC/Plugins.sh
+  Plugins: CMCC-RAX3000M-EMMC/Plugins.sh
   
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
@@ -129,10 +129,11 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-
-        # 自定义
-        # cd ./package
-        # chmod +x $Plugins && $GITHUB_WORKSPACE/$Plugins
+        
+    - name: 自定义插件
+      run: |
+       cd ./openwrt/package/
+       chmod +x $Plugins && $GITHUB_WORKSPACE/$Plugins
         
     - name: 使用原厂MAC地址顺序
       if: github.event.inputs.MAC_ORDER == 'true'
