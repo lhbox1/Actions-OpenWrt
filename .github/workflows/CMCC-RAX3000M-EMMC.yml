@@ -57,7 +57,7 @@ env:
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
   DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part3.sh
   
-  Plugins: CMCC-RAX3000M-EMMC/Plugins.sh
+  DIY1: CMCC-RAX3000M-EMMC/Plugins.sh
   
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
@@ -133,7 +133,7 @@ jobs:
     - name: 自定义插件
       run: |
        cd ./openwrt/package/
-       chmod +x $Plugins && $GITHUB_WORKSPACE/$Plugins
+       chmod +x $DIY1 && $GITHUB_WORKSPACE/$DIY1
         
     - name: 使用原厂MAC地址顺序
       if: github.event.inputs.MAC_ORDER == 'true'
