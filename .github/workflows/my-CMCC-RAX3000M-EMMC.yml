@@ -142,7 +142,7 @@ jobs:
         
         #echo 'src-git lhpakg https://github.com/lhbox1/pakg;main' >> feeds.conf.default
         
-        #echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
+        echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
         
         ./scripts/feeds update -a
         ./scripts/feeds install -a
