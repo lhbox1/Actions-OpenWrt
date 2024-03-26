@@ -32,9 +32,9 @@ git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/
 #git clone --depth=1 --single-branch --branch "master" https://github.com/kenzok8/openwrt-packages.git
 #git clone --depth=1 --single-branch --branch "master" https://github.com/kenzok8/small.git
 
-git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git
+#git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git
 #git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall2.git
-git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall-packages.git
+#git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall-packages.git
 
 #alit列表
 #git clone --depth=1 --single-branch --branch "master" https://github.com/sbwml/luci-app-alist.git
