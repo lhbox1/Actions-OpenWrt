@@ -10,6 +10,11 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+#删除冲突插件
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\).*")
+
+
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.15.1/g' package/base-files/files/bin/config_generate
 ##-----------------Add OpenClash dev core------------------
