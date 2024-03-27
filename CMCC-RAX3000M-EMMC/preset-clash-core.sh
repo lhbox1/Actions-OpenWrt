@@ -79,11 +79,11 @@ wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
-wget  -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
-unzip -q temp.zip
-cp -r OpenClash-master/luci-app-openclash package/
-rm -rf OpenClash-master
-rm -rf temp.zip
+#wget  -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+#unzip -q temp.zip
+#cp -r OpenClash-master/luci-app-openclash package/
+#rm -rf OpenClash-master
+#rm -rf temp.zip
 
 #下载使用master版本passwall
 wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
@@ -142,8 +142,8 @@ rm -rf openwrt-passwall-main
 
 
 #下载使用dev版本openclash
-#wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
-#unzip -q temp.zip
-#cp -r OpenClash-dev/luci-app-openclash package/
-#rm -rf OpenClash-dev
-#rm -rf temp.zip
+wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
+unzip -q temp.zip
+cp -r OpenClash-dev/luci-app-openclash package/
+rm -rf OpenClash-dev
+rm -rf temp.zip
