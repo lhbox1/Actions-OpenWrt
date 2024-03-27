@@ -15,9 +15,9 @@
 
 # Add a feed source
 
-echo 'src-git lhpakg https://github.com/lhbox1/pakg' >> feeds.conf.default
+#echo 'src-git lhpakg https://github.com/lhbox1/pakg' >> feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld;master' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall;main' >>feeds.conf.default
 git clone https://github.com/messense/aliyundrive-webdav package/messense
 
-git clone https://github.com/fw876/helloworld package/helloworld
+#git clone https://github.com/fw876/helloworld package/helloworld
