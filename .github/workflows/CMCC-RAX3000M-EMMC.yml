@@ -115,7 +115,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
         #自定义插件
-        #chmod +x $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/preset-clash-core.sh && $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/preset-clash-core.sh
+        chmod +x $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/preset-clash-core.sh && $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/preset-clash-core.sh
         
     - name: 更新 & 安装 feeds
       run: |
