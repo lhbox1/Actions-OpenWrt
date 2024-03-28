@@ -134,17 +134,16 @@ jobs:
       run: |
         cd openwrt
         
-        
-        
+
+        ./scripts/feeds update -a
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
         ./scripts/feeds update istore
         ./scripts/feeds install -d y -p istore luci-app-store
         
         #echo 'src-git lhpakg https://github.com/lhbox1/pakg;main' >> feeds.conf.default
         
-        echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
+        #echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
         
-        ./scripts/feeds update -a
         ./scripts/feeds install -a
         
     - name: 加载config & DIY_P2_SH
