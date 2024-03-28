@@ -13,7 +13,6 @@
 # 预置openclash内核
 mkdir -p files/etc/openclash/core
 
-
 # dev内核
 #CLASH_DEV_URL="https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz"
 # premium内核
@@ -79,13 +78,14 @@ wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
-#wget  -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
-#unzip -q temp.zip
-#cp -r OpenClash-master/luci-app-openclash package/
-#rm -rf OpenClash-master
-#rm -rf temp.zip
+wget  -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+unzip -q temp.zip
+cp -r OpenClash-master/luci-app-openclash package/
+rm -rf OpenClash-master
+rm -rf temp.zip
 
 #下载使用master版本passwall
+
 wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
 unzip -q temp1.zip
 cp -r openwrt-passwall-main/luci-app-passwall package/
@@ -95,23 +95,23 @@ rm -rf openwrt-passwall-main
 
 
 #下载使用passwall依赖kenzok8/small库
-#wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
-#unzip -q temp2.zip
+wget  -qO- https://github.com/kenzok8/small/archive/master.zip > temp2.zip
+unzip -q temp2.zip
 
-#cp -r small-master/luci-app-ssr-plus package/
-#cp -r small-master/shadow-tls package/
+cp -r small-master/luci-app-ssr-plus package/
+cp -r small-master/shadow-tls package/
 
-#rm -rf temp2.zip
-#rm -rf small-master
+rm -rf temp2.zip
+rm -rf small-master
 
 #插件库
-#wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
-#unzip -q temp3.zip
+wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
+unzip -q temp3.zip
 #cp -r pakg-main/luci-app-adguardhome package/
-#cp -r pakg-main/luci-app-mosdns package/
-#cp -r pakg-main/v2dat package/
-#rm -rf temp3.zip
-#rm -rf pakg-main
+cp -r pakg-main/luci-app-mosdns package/
+cp -r pakg-main/v2dat package/
+rm -rf temp3.zip
+rm -rf pakg-main
 
 
 #下载使用sbwml版本alist
@@ -142,8 +142,8 @@ rm -rf openwrt-passwall-main
 
 
 #下载使用dev版本openclash
-wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
-unzip -q temp.zip
-cp -r OpenClash-dev/luci-app-openclash package/
-rm -rf OpenClash-dev
-rm -rf temp.zip
+#wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
+#unzip -q temp.zip
+#cp -r OpenClash-dev/luci-app-openclash package/
+#rm -rf OpenClash-dev
+#rm -rf temp.zip
