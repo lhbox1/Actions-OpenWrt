@@ -122,10 +122,10 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-    - name: 自定义插件
-      run: |
-       cd ./openwrt/package/
-       chmod +x $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Plugins.sh && $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Plugins.sh
+    #- name: 自定义插件
+    #  run: |
+     #  cd ./openwrt/package/
+     #  chmod +x $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Plugins.sh && $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/Plugins.sh
         
     - name: 加载config & DIY_P2_SH
       run: |
