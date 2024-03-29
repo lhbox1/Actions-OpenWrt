@@ -98,9 +98,11 @@ rm -rf openwrt-passwall-main
 
 
 
-#下载使用passwall依赖kenzok8/small库
+#下载使用helloworld依赖库ssr
 wget  -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
 unzip -q temp2.zip
+
+rm -rf feeds/packages/net/xray-core
 
 cp -r helloworld-master/luci-app-ssr-plus package/
 cp -r helloworld-master/shadow-tls package/
