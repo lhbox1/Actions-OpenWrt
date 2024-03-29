@@ -130,6 +130,7 @@ rm -rf small-master
 wget  -qO- https://github.com/sbwml/luci-app-mosdns/archive/v5.zip > mosdns.zip
 unzip -q mosdns.zip
 
+rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
