@@ -20,5 +20,10 @@
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall;main' >>feeds.conf.default
 git clone https://github.com/messense/aliyundrive-webdav package/messense
 
+#alist
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/packages/net/alist
+git clone https://github.com/sbwml/luci-app-alist package/alist
+
 # git clone https://github.com/fw876/helloworld package/helloworld
 # git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
