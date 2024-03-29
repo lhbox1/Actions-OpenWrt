@@ -119,12 +119,12 @@ rm -rf small-master
 #rm -rf pakg-main
 
 
-#下载使用sbwml版本alist
-#wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
-#unzip -q alist.zip
-#cp -r luci-app-alist-master/luci-app-alist package/
-#rm -rf alist.zip
-#rm -rf luci-app-alist-master
+#alist更新
+rm -rf feeds/luci/applications/luci-app-alist
+rm -rf feeds/packages/net/alist
+git clone https://github.com/sbwml/luci-app-alist package/alist
+
+
 
 #下载使用sbwml版本mosdns
 wget  -qO- https://github.com/sbwml/luci-app-mosdns/archive/v5.zip > mosdns.zip
