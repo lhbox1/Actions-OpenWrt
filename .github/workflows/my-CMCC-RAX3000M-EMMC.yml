@@ -134,7 +134,7 @@ jobs:
       run: |
         cd openwrt
         #cd /workdir/openwrt
-        echo >> feeds.conf.default
+        #echo >> feeds.conf.default
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
         #echo 'src-git helloworld https://github.com/fw876/helloworld;master' >> feeds.conf.default
         ./scripts/feeds update istore
