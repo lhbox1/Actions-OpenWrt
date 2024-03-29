@@ -102,11 +102,11 @@ rm -rf openwrt-passwall-main
 wget  -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 
-rm -rf feeds/packages/net/xray-core
+#rm -rf feeds/packages/net/xray-core
 
 cp -r helloworld-master/luci-app-ssr-plus package/
 cp -r helloworld-master/shadow-tls package/
-cp -r helloworld-master/xray-core package/
+#cp -r helloworld-master/xray-core package/
 
 
 rm -rf temp2.zip
