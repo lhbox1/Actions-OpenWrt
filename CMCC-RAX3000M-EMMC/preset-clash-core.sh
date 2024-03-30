@@ -83,14 +83,14 @@ wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
-#wget  -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+#wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
 #unzip -q temp.zip
 #cp -r OpenClash-master/luci-app-openclash package/
 #rm -rf OpenClash-master
 #rm -rf temp.zip
 
 #下载使用master版本passwall
-wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
+wget -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
 unzip -q temp1.zip
 rm -rf feeds/luci/applications/luci-app-passwall
 cp -r openwrt-passwall-main/luci-app-passwall package/
@@ -100,7 +100,7 @@ rm -rf openwrt-passwall-main
 
 
 #下载使用helloworld依赖库ssr
-wget  -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
+wget -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 
 #rm -rf feeds/packages/net/xray-core
@@ -124,7 +124,7 @@ rm -rf helloworld-master
 
 
 #alist更新
-wget  -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
+wget -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
 unzip -q alist.zip
 rm -rf feeds/luci/applications/luci-app-alist
 cp -r luci-app-alist-master/luci-app-alist package/
