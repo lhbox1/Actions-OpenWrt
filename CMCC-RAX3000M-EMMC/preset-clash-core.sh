@@ -92,6 +92,7 @@ wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 #下载使用master版本passwall
 wget  -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
 unzip -q temp1.zip
+rm -rf feeds/luci/applications/luci-app-passwall
 cp -r openwrt-passwall-main/luci-app-passwall package/
 rm -rf temp1.zip
 rm -rf openwrt-passwall-main
@@ -103,7 +104,7 @@ wget  -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 
 #rm -rf feeds/packages/net/xray-core
-
+rm -rf feeds/luci/applications/luci-app-ssr-plus
 cp -r helloworld-master/luci-app-ssr-plus package/
 cp -r helloworld-master/shadow-tls package/
 #cp -r helloworld-master/xray-core package/
