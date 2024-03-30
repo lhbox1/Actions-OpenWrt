@@ -120,6 +120,7 @@ jobs:
     - name: 更新 & 安装 feeds
       run: |
         cd openwrt
+        ./scripts/feeds update -a && ./scripts/feeds install -a
         
         ##istore包
         echo >> feeds.conf.default
