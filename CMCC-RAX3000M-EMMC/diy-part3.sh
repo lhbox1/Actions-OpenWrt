@@ -11,7 +11,7 @@
 #
 
 #删除冲突插件
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\).*")
+#rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\).*")
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\).*")
 
