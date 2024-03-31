@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\|easymesh\).*")
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
@@ -37,7 +37,7 @@ sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/
 
 ##添加软件包
 git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
-git clone https://github.com/shuishihan/luci-app-easymesh.git package/feeds/luci/luci-app-easymesh
+git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci/luci-app-easymesh
 #argon主题
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
