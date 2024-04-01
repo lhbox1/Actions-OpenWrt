@@ -103,11 +103,13 @@ rm -rf openwrt-passwall-main
 wget -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
 unzip -q temp2.zip
 
-#rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/shadowsocks-libev
+rm -rf feeds/packages/net/shadowsocks-rust
 rm -rf feeds/luci/applications/luci-app-ssr-plus
 cp -r helloworld-master/luci-app-ssr-plus package/
 cp -r helloworld-master/shadow-tls package/
-#cp -r helloworld-master/xray-core package/
+cp -r helloworld-master/shadowsocksr-libev package/
+cp -r helloworld-master/shadowsocks-rust package/
 
 
 rm -rf temp2.zip
