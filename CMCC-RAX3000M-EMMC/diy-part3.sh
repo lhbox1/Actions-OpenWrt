@@ -18,7 +18,8 @@ rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\|e
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 
-
+#修改默认主机名
+sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.15.1/g' package/base-files/files/bin/config_generate
