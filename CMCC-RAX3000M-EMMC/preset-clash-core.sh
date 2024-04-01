@@ -143,6 +143,7 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 cp -r luci-app-mosdns-5/luci-app-mosdns package/
 cp -r luci-app-mosdns-5/v2dat package/
+cp -r luci-app-mosdns-5/mosdns package/
 rm -rf mosdns.zip
 rm -rf luci-app-mosdns-5
 
