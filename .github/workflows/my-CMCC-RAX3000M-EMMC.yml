@@ -310,8 +310,8 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         touch release.txt
-        echo "- 自用固件" >> release.txt
         echo "- 使用源码：${{ env.REPO_URL }}" >> release.txt
+        echo "- 使用设备：${{ env.DEVICE_NAME }}" >> release.txt
         echo "- 登录地址：${{ env.IP_ADDR }}" >> release.txt
         if [[ "${{ env.MAC_FIX }}" == '-MAC_fix' ]]; then
                echo "- 修改源码 使用原厂的MAC地址顺序" >> release.txt
