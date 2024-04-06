@@ -33,8 +33,9 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#  schedule:
-#    - cron: 0 16 * * *
+  
+#  #schedule:
+#   # - cron: 0 16 * * *
 
 env:
   ###############手动修改##############
@@ -175,7 +176,7 @@ jobs:
     - name: 编译固件
       id: compile
       run: |
-        md5_file1=$(md5sum "CMCC-RAX3000M-EMMC/nx30pro_eeprom.bin" | awk '{print $1}')
+        md5_file1=$(md5sum "eeprom/nx30pro_eeprom.bin" | awk '{print $1}')
         md5_file2=$(md5sum "openwrt/target/linux/mediatek/mt7981/base-files/lib/firmware/MT7981_iPAiLNA_EEPROM.bin" | awk '{print $1}')
         cd openwrt
         
