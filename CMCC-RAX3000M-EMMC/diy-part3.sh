@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|passwall\|ssr-plus\|easymesh\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|ddns-go\|openclash\|passwall\|ssr-plus\|easymesh\).*")
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
@@ -42,5 +42,5 @@ git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 #argon主题
-#git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
