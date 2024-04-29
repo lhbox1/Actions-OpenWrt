@@ -48,8 +48,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#  schedule:
-#    - cron: 0 16 * * *
+  schedule:
+    - cron: 0 13 * * 2
 ##237源码
 ## OWRT_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
 ## REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
