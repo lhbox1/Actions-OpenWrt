@@ -39,7 +39,7 @@ sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/
 ##添加软件包
 #git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
-git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
+git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 #argon主题
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
