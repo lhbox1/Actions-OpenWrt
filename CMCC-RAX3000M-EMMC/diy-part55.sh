@@ -10,7 +10,7 @@ CLASH_TUN_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master
 # Meta内核版本
 CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
 wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
-#wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
+wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
 wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 # 给内核权限
 chmod +x files/etc/openclash/core/clash*
@@ -31,11 +31,11 @@ cp -r OpenClash-master/luci-app-openclash package/
 rm -rf OpenClash-master
 rm -rf temp.zip
 #alist更新
-wget -qO- https://github.com/lmq8267/luci-app-alist/archive/master.zip > alist.zip
+#wget -qO- https://github.com/lmq8267/luci-app-alist/archive/master.zip > alist.zip
 
 #wget -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
-unzip -q alist.zip
-rm -rf feeds/luci/applications/luci-app-alist
-cp -r luci-app-alist-master/luci-app-alist package/
-rm -rf alist.zip
-rm -rf luci-app-alist-master
+#unzip -q alist.zip
+#rm -rf feeds/luci/applications/luci-app-alist
+#cp -r luci-app-alist-master/luci-app-alist package/
+#rm -rf alist.zip
+#rm -rf luci-app-alist-master
