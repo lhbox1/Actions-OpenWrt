@@ -43,7 +43,7 @@ sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/
 git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 
-git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 #alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
