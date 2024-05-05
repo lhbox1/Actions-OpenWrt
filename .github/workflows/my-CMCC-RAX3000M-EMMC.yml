@@ -14,16 +14,6 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
-      MAC_ORDER:
-        description: 'Use the original MAC address order'
-        required: true
-        default: true
-        type: boolean
-      EEPROM:
-        description: 'Use nx30pro eeprom'
-        required: true
-        default: true
-        type: boolean
       EMMC_52MHZ:
         description: 'eMMC use 52MHz max-frequency'
         required: true
@@ -38,11 +28,6 @@ on:
         description: 'Not build luci-app-dockerman'
         required: true
         default: false
-        type: boolean
-      MASTER_OPENCLASH:
-        description: '编译魔法源码'
-        required: true
-        default: true
         type: boolean
       ssh:
         description: 'SSH connection to Actions'
@@ -127,7 +112,6 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: 加载魔法源码
-      if: github.event.inputs.MASTER_OPENCLASH == 'true'
       run: |
         chmod +x $CLASH_SH
         cd openwrt
@@ -164,7 +148,6 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
     - name: 使用原厂MAC地址顺序
-      if: github.event.inputs.MAC_ORDER == 'true'
       run: |
         cd openwrt
         ## 调换lan、wan的MAC地址
@@ -192,7 +175,6 @@ jobs:
         sed -i 's/max-frequency = <.*>/max-frequency = <52000000>/g' "${{ env.DTS_FILE }}"
         
     - name: 使用nx30pro的高功率eeprom
-      if: github.event.inputs.EEPROM == 'true'
       run: |
         cp CMCC-RAX3000M-EMMC/nx30pro_eeprom.bin openwrt/package/mtk/drivers/mt_wifi/files/mt7981-default-eeprom/MT7981_iPAiLNA_EEPROM.bin
         cd openwrt
