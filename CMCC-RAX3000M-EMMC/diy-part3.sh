@@ -43,7 +43,10 @@ git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguar
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 #alist
-git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
+#git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
+git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
+
+
 #argon主题
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
