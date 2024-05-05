@@ -14,11 +14,6 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
-      EEPROM:
-        description: 'Use nx30pro eeprom'
-        required: true
-        default: false
-        type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
         required: true
