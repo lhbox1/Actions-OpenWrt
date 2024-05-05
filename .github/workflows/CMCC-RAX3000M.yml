@@ -185,7 +185,7 @@ jobs:
       id: compile
       run: |
         md5_file1=$(md5sum "CMCC-RAX3000M-EMMC/nx30pro_eeprom.bin" | awk '{print $1}')
-        md5_file2=$(md5sum "openwrt/target/linux/mediatek/mt7981/base-files/lib/firmware/MT7981_iPAiLNA_EEPROM.bin" | awk '{print $1}')
+        md5_file2=$(md5sum "openwrt/package/mtk/drivers/mt_wifi/files/mt7981-default-eeprom/MT7981_iPAiLNA_EEPROM.bin" | awk '{print $1}')
         cd openwrt
         
         echo -e "$(nproc) thread compile"
