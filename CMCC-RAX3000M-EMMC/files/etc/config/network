@@ -53,3 +53,4 @@ config interface 'utun'
 	option ifname 'utun'
 	option device 'utun'
 	option auto '0'
+
