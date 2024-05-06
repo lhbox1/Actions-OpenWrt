@@ -16,6 +16,7 @@
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\|alist\|easymesh\).*")
 
 #rm -rf feeds/packages/net/alist
+rm -rf package/istore
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
@@ -51,6 +52,12 @@ git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-e
 #alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
+
+git clone https://github.com/linkease/istore package/nas-istore
+        
+
+git clone https://github.com/linkease/nas-packages.git package/nas-istore
+git clone https://github.com/linkease/nas-packages-luci.git package/nas-istore
 #argon主题
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
