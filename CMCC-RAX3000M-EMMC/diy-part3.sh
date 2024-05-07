@@ -13,9 +13,10 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\).*")
 
 rm -rf feeds/packages/net/smartdns
+rm -rf feeds/packages/net/ddns-go
 rm -rf feeds/packages/lang/golang
 
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
@@ -44,7 +45,7 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 
 ##添加软件包
 #git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-#git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
+git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 
