@@ -16,6 +16,7 @@
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|passwall\|ssr-plus\|alist\|easymesh\).*")
 
 rm -rf feeds/packages/lang/golang
+
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 
 #修改默认主机名
@@ -50,6 +51,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-pa
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 #git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
+#
+git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 #argon主题
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
