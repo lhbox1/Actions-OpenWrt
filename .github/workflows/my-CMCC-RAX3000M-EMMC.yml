@@ -106,6 +106,8 @@ jobs:
         
     - name: 加载feeds.conf.default & DIY_P1_SH
       run: |
+        [ -e $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files ] && mv $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files openwrt/files
+        
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
@@ -143,7 +145,7 @@ jobs:
     - name: 加载config & DIY_P2_SH
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        [ -e $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files ] && mv $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files openwrt/files
+        
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
