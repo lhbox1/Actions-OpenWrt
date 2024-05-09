@@ -13,9 +13,9 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\|argon\).*")
 
-rm -rf feeds/packages/net/alist
+rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/packages/net/ddns-go
 
 rm -rf feeds/packages/lang/golang
@@ -57,13 +57,13 @@ git clone https://github.com/lhbox1/pakg.git package/luci-app-passwall
 
 
 #alist
-#git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
-git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
+git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
+#git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 #
-git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+#git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 #argon主题
-#git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
