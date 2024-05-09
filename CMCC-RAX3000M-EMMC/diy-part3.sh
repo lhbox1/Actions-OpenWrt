@@ -61,7 +61,7 @@ git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 #git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 #
-#git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 #argon主题
