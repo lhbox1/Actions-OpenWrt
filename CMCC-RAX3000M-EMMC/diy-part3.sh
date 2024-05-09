@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(unblockneteasemusic\|ddns-go\|openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\|argon\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(unblockneteasemusic\|ddns-go\|openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\).*")
 
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/ddns-go
@@ -64,5 +64,5 @@ git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 #argon主题
-git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+#git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
