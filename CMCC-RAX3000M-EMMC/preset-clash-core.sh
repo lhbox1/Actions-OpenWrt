@@ -149,13 +149,6 @@ rm -rf luci-app-mosdns-5
 
 
 
-#smartdns
-wget  -qO- https://github.com/pymumu/openwrt-smartdns/archive/master.zip > smartdns.zip
-unzip -q smartdns.zip
-cp -rf openwrt-smartdns-master/Makefile feeds/packages/net/smartdns/Makefile
-rm -rf smartdns.zip
-rm -rf openwrt-smartdns-master
-
 #wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
 
 #cp -r openwrt-passwall2-main/luci-app-passwall2 package/
