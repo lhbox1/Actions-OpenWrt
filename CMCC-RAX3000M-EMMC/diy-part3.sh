@@ -15,7 +15,7 @@
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(unblockneteasemusic\|ddns-go\|openclash\|passwall\|ssr-plus\|alist\|easymesh\|smartdns\|argon\).*")
 
-#rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/ddns-go
 
 rm -rf feeds/packages/lang/golang
