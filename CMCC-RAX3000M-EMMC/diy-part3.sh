@@ -13,9 +13,9 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|ssr-plus\|alist\|easymesh\|smartdns\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|ssr-plus\|alist\|easymesh\).*")
 
-rm -rf feeds/packages/net/smartdns
+#rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/ddns-go
 
 rm -rf feeds/packages/lang/golang
@@ -49,11 +49,11 @@ git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 
-#git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 
-git clone https://github.com/lhbox1/pakg.git package/luci-app-smartdns
+#git clone https://github.com/lhbox1/pakg.git package/luci-app-smartdns
 
-#git clone --depth=1 --single-branch --branch "luci-smartdns-dev" https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 
 
 #alist
