@@ -54,7 +54,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-pa
 #git clone https://github.com/lhbox1/pakg.git package/pakggg
 
 git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 #alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
