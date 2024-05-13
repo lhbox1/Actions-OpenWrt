@@ -47,6 +47,7 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 #git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/chenmozhijin/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
