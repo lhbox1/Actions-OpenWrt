@@ -19,7 +19,7 @@ rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|passwall\|ss
 #rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/packages/net/ddns-go
 
-#rm -rf package/istore
+rm -rf package/istore
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
@@ -57,9 +57,9 @@ git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
 
-#git clone https://github.com/linkease/istore package/nas-istore
-#git clone https://github.com/linkease/nas-packages.git package/nas-istore1
-#git clone https://github.com/linkease/nas-packages-luci.git package/nas-istore2
+git clone https://github.com/linkease/istore package/nas-istore
+git clone https://github.com/linkease/nas-packages.git package/nas-istore1
+git clone https://github.com/linkease/nas-packages-luci.git package/nas-istore2
 #argon主题
 #git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
