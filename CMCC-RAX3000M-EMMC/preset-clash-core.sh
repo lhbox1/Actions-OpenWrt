@@ -152,21 +152,25 @@ rm -rf luci-app-mosdns-5
 
 
 
-#wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
+wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
+
+#rm -rf feeds/packages/net/shadowsocks-libe
+rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/chinadns-ng
 
 #cp -r openwrt-passwall2-main/luci-app-passwall2 package/
 #cp -r openwrt-passwall-packages-main/dns2socks package/
 #cp -r openwrt-passwall-packages-main/dns2tcp package/
-#cp -r openwrt-passwall-packages-main/xray-core package/
-#cp -r openwrt-passwall-packages-main/chinadns-ng package/
+cp -r openwrt-passwall-packages-main/xray-core package/
+cp -r openwrt-passwall-packages-main/chinadns-ng package/
 #cp -r openwrt-passwall-packages-main/sing-box package/
 #cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
 #cp -r openwrt-passwall-packages-main/microsocks package/
 
 #rm -rf openwrt-passwall2-main
-#rm -rf openwrt-passwall-packages-main
+rm -rf openwrt-passwall-packages-main
 
-#rm -rf temp2.zip
+rm -rf temp3.zip
 
 
 #下载使用dev版本openclash
