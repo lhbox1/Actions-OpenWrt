@@ -15,6 +15,9 @@
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|ssr-plus\|passwall\|alist\|easymesh\).*")
 
+rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/chinadns-ng
+
 #rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/ddns-go
 
