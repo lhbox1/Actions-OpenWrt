@@ -161,8 +161,8 @@ rm -rf feeds/packages/net/chinadns-ng
 #cp -r openwrt-passwall2-main/luci-app-passwall2 package/
 #cp -r openwrt-passwall-packages-main/dns2socks package/
 #cp -r openwrt-passwall-packages-main/dns2tcp package/
-cp -r openwrt-passwall-packages-main/xray-core package/
-cp -r openwrt-passwall-packages-main/chinadns-ng package/
+cp -rf openwrt-passwall-packages-main/xray-core feeds/packages/net/
+cp -rf openwrt-passwall-packages-main/chinadns-ng feeds/packages/net/
 #cp -r openwrt-passwall-packages-main/sing-box package/
 #cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
 #cp -r openwrt-passwall-packages-main/microsocks package/
