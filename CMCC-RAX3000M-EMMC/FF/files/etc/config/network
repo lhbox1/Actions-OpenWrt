@@ -6,7 +6,7 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fd2e:428e:b25a::/48'
+	option ula_prefix 'fd0f:067c:d655::/48'
 
 config device
 	option name 'br-lan'
@@ -47,6 +47,12 @@ config switch_vlan
 	option device 'switch0'
 	option vlan '1'
 	option ports '0 1 2 6'
+
+config interface 'utun'
+	option proto 'none'
+	option ifname 'utun'
+	option device 'utun'
+	option auto '0'
 
 config interface 'docker'
 	option device 'docker0'
