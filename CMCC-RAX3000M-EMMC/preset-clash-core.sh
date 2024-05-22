@@ -83,10 +83,12 @@ wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
-wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+#wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.003-beta > temp.zip
+
 unzip -q temp.zip
-cp -r OpenClash-master/luci-app-openclash package/
-rm -rf OpenClash-master
+cp -r OpenClash-0.46.003-beta/luci-app-openclash package/
+rm -rf OpenClash-0.46.003-beta
 rm -rf temp.zip
 
 #下载使用master版本passwall
