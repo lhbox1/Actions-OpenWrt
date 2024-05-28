@@ -48,12 +48,6 @@ config switch_vlan
 	option vlan '1'
 	option ports '0 1 2 6'
 
-config interface 'utun'
-	option proto 'none'
-	option ifname 'utun'
-	option device 'utun'
-	option auto '0'
-
 config interface 'docker'
 	option device 'docker0'
 	option proto 'none'
