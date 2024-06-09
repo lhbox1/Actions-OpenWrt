@@ -19,8 +19,14 @@ sed -i "s/hostname='.*'/hostname='AX1800_PRO'/g" package/base-files/files/bin/co
 curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 chmod +x /tmp/clash >/dev/null 2>&1
+chmod +x /tmp/clash_meta >/dev/null 2>&1
+chmod +x /tmp/clash_tun >/dev/null 2>&1
 mkdir -p package/kenzo/luci-app-openclash/root/etc/openclash/core
+
 mv /tmp/clash package/kenzo/luci-app-openclash/root/etc/openclash/core/clash >/dev/null 2>&1
+mv /tmp/clash_meta package/kenzo/luci-app-openclash/root/etc/openclash/core/clash_meta >/dev/null 2>&1
+mv /tmp/clash_tun package/kenzo/luci-app-openclash/root/etc/openclash/core/clash_tun >/dev/null 2>&1
+
 rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 
 ##预置OpenClash内核和GEO数据
