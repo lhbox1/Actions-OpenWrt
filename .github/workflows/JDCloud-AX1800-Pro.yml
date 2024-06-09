@@ -7,7 +7,7 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
-###############手动修改###########
+###############手动修改##############
 name: JDCloud-AX1800-Pro-JiaY-shi
 
 on:
@@ -37,7 +37,7 @@ env:
   REPO_URL: https://github.com/JiaY-shi/openwrt
   REPO_BRANCH: ipq60xx-devel_nss
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: JDCloud-AX1800-Pro/ax1800.config
+  CONFIG_FILE: JDCloud-AX1800-Pro/.config
   DIY_P1_SH: JDCloud-AX1800-Pro/diy-part1.sh
   DIY_P2_SH: JDCloud-AX1800-Pro/diy-part2.sh
   SSH_ACTIONS: false
@@ -111,13 +111,9 @@ jobs:
         
     - name: 加载config & DIY_P2_SH
       run: |
-
-        ## [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
-        rm -rf ./tmp* ./.config*
-        cat $GITHUB_WORKSPACE/JDCloud-AX1800-Pro/ax1800.config >> .config
-       
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
     - name: 显示CPU状态和无线温度
