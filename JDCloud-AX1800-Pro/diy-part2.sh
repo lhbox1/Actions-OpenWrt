@@ -16,7 +16,7 @@
 #sed -i "s/hostname='.*'/hostname='AX1800_PRO'/g" package/base-files/files/bin/config_generate
 
 ##-----------------Add dev core for kenzo OpenClash------------------
-curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/clash1.tar.gz -o /tmp/clash.tar.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/clash.tar.gz -o /tmp/clash.tar.gz
 
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 chmod +x /tmp/clash >/dev/null 2>&1
@@ -31,8 +31,6 @@ mv /tmp/clash_tun package/kenzo/luci-app-openclash/root/etc/openclash/core/clash
 rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 
 ##预置OpenClash内核和GEO数据
-curl -sfL -o /package/kenzo/luci-app-openclash/root/etc/openclash/Country.mmdb https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
-curl -sfL -o /package/kenzo/luci-app-openclash/root/etc/openclash/GeoSite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
-curl -sfL -o /package/kenzo/luci-app-openclash/root/etc/openclash/GeoIP.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
-
-
+curl -sfL -o package/kenzo/luci-app-openclash/root/etc/openclash/Country.mmdb https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
+curl -sfL -o package/kenzo/luci-app-openclash/root/etc/openclash/GeoSite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
+curl -sfL -o package/kenzo/luci-app-openclash/root/etc/openclash/GeoIP.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
