@@ -7,7 +7,7 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
-###############手动修改##############
+###############手动修改###########
 name: JDCloud-AX1800-Pro-JiaY-shi
 
 on:
@@ -106,9 +106,6 @@ jobs:
         cp -r JDCloud-AX1800-Pro/mbedtls-2.28.8 openwrt/package/libs/mbedtls
         cd openwrt
         git apply jdc_ax1800-pro.patch
-        
-        
-        
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
