@@ -111,9 +111,13 @@ jobs:
         
     - name: 加载config & DIY_P2_SH
       run: |
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+
+        ## [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
+        rm -rf ./tmp* ./.config*
+        cat $GITHUB_WORKSPACE/JDCloud-AX1800-Pro/ax1800.config >> .config
+       
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
     - name: 显示CPU状态和无线温度
