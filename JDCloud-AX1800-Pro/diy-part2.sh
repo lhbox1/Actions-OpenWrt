@@ -11,9 +11,9 @@
 #
 
 #修改默认IP地址
-sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.68.1/g" ./package/base-files/files/bin/config_generate
+#sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.68.1/g" ./package/base-files/files/bin/config_generate
 
-sed -i "s/hostname='.*'/hostname='AX1800_PRO'/g" package/base-files/files/bin/config_generate
+#sed -i "s/hostname='.*'/hostname='AX1800_PRO'/g" package/base-files/files/bin/config_generate
 
 ##-----------------Add dev core for kenzo OpenClash------------------
 curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/clash1.tar.gz -o /tmp/clash.tar.gz
