@@ -8,9 +8,9 @@ on:
 env:
   REPO_URL: https://github.com/breeze303/openwrt-6.x.git
   REPO_BRANCH: main
-  CONFIG_FILE: configs/ipq60xx-wifi(emmc).config
-  PATCHES_FILE_1: patches/0001-show-soc-status-on-luci.patch
-  DIY_SCRIPT: diy-script.sh
+  CONFIG_FILE: JDCloud-AX1800-Pro/ipq60xx-wifi(emmc).config
+  PATCHES_FILE_1: JDCloud-AX1800-Pro/0001-show-soc-status-on-luci.patch
+  DIY_SCRIPT: JDCloud-AX1800-Pro/diy-script.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
