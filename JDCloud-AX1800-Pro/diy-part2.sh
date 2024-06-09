@@ -10,8 +10,8 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+#修改默认IP地址
+sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.68.1/g" ./package/base-files/files/bin/config_generate
 
 sed -i "s/hostname='.*'/hostname='AX1800_PRO'/g" package/base-files/files/bin/config_generate
 
