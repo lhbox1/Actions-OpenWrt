@@ -23,3 +23,9 @@ mkdir -p package/kenzo/luci-app-openclash/root/etc/openclash/core
 mv /tmp/clash package/kenzo/luci-app-openclash/root/etc/openclash/core/clash >/dev/null 2>&1
 rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 
+##预置OpenClash内核和GEO数据
+curl -sfL -o /package/kenzo/luci-app-openclash/root/etc/openclash/Country.mmdb https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
+curl -sfL -o /package/kenzo/luci-app-openclash/root/etc/openclash/GeoSite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
+curl -sfL -o /package/kenzo/luci-app-openclash/root/etc/openclash/GeoIP.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
+
+
