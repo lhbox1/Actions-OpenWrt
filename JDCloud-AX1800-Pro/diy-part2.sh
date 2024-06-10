@@ -22,7 +22,7 @@ rm -rf package/kenzo/luci-app-alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
 rm -rf package/kenzo/luci-app-openclash
-git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git package/kenzo
+git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
 
 rm -rf package/kenzo/luci-app-zerotier
 git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
@@ -47,7 +47,7 @@ export GEO_MMDB=https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/C
 export GEO_SITE=https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
 export GEO_IP=https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
 
-cd ./package/kenzo/luci-app-openclash/root/etc/openclash
+cd ./package/kenzo/luci-app-openclash/luci-app-openclash/root/etc/openclash
 curl -sfL -o ./Country.mmdb $GEO_MMDB
 curl -sfL -o ./GeoSite.dat $GEO_SITE
 curl -sfL -o ./GeoIP.dat $GEO_IP
