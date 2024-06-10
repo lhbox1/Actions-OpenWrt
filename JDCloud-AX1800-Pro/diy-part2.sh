@@ -24,6 +24,10 @@ git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 rm -rf package/kenzo/luci-app-openclash
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git package/kenzo
 
+
+git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
+
+
 #预置OpenClash内核和GEO数据
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
 
