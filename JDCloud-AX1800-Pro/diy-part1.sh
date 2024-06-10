@@ -20,5 +20,5 @@ git clone https://github.com/yuanzhangyin99/5G-Modem-Support package/yuanzhangyi
 
 #自定义
 AGH_CORE=https://github.com/sbwml/luci-app-alist/releases/download/v3.28.0/openwrt-22.03-aarch64_cortex-a53.tar.gz
-wget -qO- $AGH_CORE | tar xOvz > files/usr/bin/AdGuardHome
-chmod +x files/usr/bin/AdGuardHome
+wget -qO- $AGH_CORE | tar xOvz > files/usr/bin/alist
+chmod +x files/usr/bin/alist
