@@ -25,7 +25,8 @@ rm -rf package/kenzo/luci-app-openclash
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
 
 rm -rf package/kenzo/luci-app-zerotier
-git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
+#git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
+
 rm -rf package/kenzo/luci-app-wechatpush
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 
