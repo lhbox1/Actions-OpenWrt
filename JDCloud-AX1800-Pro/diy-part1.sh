@@ -29,6 +29,6 @@ wget -qO- https://github.com/linkease/istore-packages/archive/main.zip > temp.zi
 unzip -q temp.zip
 #rm -rf feeds/luci/applications/luci-app-ssr-plus
 cp -r istore-packages-main/luci-app-zerotier package/
-#cp -r istore-packages-main/shadow-tls package/
+cp -r istore-packages-main/luci-app-vsftpd package/
 rm -rf temp.zip
 rm -rf istore-packages-main
