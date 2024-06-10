@@ -19,10 +19,10 @@ git clone https://github.com/kenzok8/small package/small
 git clone https://github.com/yuanzhangyin99/5G-Modem-Support package/yuanzhangyin99
 
 #自定义
-#mkdir -p files/usr/bin
-#AGH_CORE=https://github.com/sbwml/luci-app-alist/releases/download/v3.28.0/openwrt-22.03-aarch64_cortex-a53.tar.gz
-#wget -qO- $AGH_CORE | tar xOvz > files/usr/bin/alist
-#chmod +x files/usr/bin/alist
+mkdir -p files/etc/alist
+AGH_CORE=https://github.com/sbwml/luci-app-alist/releases/download/v3.28.0/openwrt-22.03-aarch64_cortex-a53.tar.gz
+wget -qO- $AGH_CORE | tar xOvz > files/etc/alist
+chmod +x files/etc/alist/alist
 
 
 wget -qO- https://github.com/linkease/istore-packages/archive/main.zip > temp.zip
