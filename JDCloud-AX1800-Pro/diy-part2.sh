@@ -25,7 +25,7 @@ rm -rf package/kiddin9/luci-app-alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
 rm -rf package/kiddin9/luci-app-openclash
-git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
+git clone --depth=1 --single-branch --branch "master" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
 
 #rm -rf package/kenzo/luci-app-zerotier
 #git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
