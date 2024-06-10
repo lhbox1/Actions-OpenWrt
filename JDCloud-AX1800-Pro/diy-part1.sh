@@ -23,3 +23,12 @@ mkdir -p files/usr/bin
 AGH_CORE=https://github.com/sbwml/luci-app-alist/releases/download/v3.28.0/openwrt-22.03-aarch64_cortex-a53.tar.gz
 wget -qO- $AGH_CORE | tar xOvz > files/usr/bin/alist
 chmod +x files/usr/bin/alist
+
+
+wget -qO- https://github.com/linkease/istore-packages/archive/main.zip > temp.zip
+unzip -q temp.zip
+#rm -rf feeds/luci/applications/luci-app-ssr-plus
+cp -r istore-packages-main/luci-app-zerotier package/
+#cp -r istore-packages-main/shadow-tls package/
+rm -rf temp.zip
+rm -rf istore-packages-main
