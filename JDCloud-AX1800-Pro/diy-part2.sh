@@ -29,6 +29,7 @@ git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app
 rm -rf package/kenzo/luci-app-wechatpush
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 
+rm -rf package/kenzo/luci-app-autotimeset
 git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 
 
