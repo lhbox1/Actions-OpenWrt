@@ -29,6 +29,9 @@ git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app
 rm -rf package/kenzo/luci-app-wechatpush
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 
+git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
+
+
 #预置OpenClash内核和GEO数据
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
 
