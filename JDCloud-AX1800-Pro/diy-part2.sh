@@ -27,6 +27,7 @@ git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/
 
 git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
 
+git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 
 #预置OpenClash内核和GEO数据
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
