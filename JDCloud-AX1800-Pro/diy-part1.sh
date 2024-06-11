@@ -16,9 +16,7 @@
 # Add a feed source
 git clone https://github.com/kenzok8/openwrt-packages package/kenzo
 git clone https://github.com/kenzok8/small package/small
-
-#git clone https://github.com/kiddin9/openwrt-packages package/kiddin9
-#git clone https://github.com/yuanzhangyin99/5G-Modem-Support package/yuanzhangyin99
+git clone https://github.com/yuanzhangyin99/5G-Modem-Support package/yuanzhangyin99
 
 #自定义
 #mkdir -p files/etc/alist
@@ -27,13 +25,10 @@ git clone https://github.com/kenzok8/small package/small
 #chmod +x files/etc/alist/alist
 
 
-#wget -qO- https://github.com/kenzok8/small-package/archive/main.zip > temp.zip
-wget -qO- https://github.com/kiddin9/openwrt-packages/archive/master.zip > temp.zip
-
+wget -qO- https://github.com/linkease/istore-packages/archive/main.zip > temp.zip
 unzip -q temp.zip
 #rm -rf feeds/luci/applications/luci-app-ssr-plus
-cp -r small-package-main/luci-app-zerotier package/
-cp -r small-package-main/luci-app-autoreboot package/
-#cp -r istore-packages-main/luci-app-vsftpd package/
+cp -r istore-packages-main/luci-app-zerotier package/
+cp -r istore-packages-main/luci-app-vsftpd package/
 rm -rf temp.zip
-rm -rf small-package-main
+rm -rf istore-packages-main
