@@ -19,18 +19,18 @@ sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/confi
 sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
 
 
-rm -rf package/kiddin9/luci-app-adguardhome
+rm -rf package/kenzo/luci-app-adguardhome
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
-rm -rf package/kiddin9/luci-app-alist
+rm -rf package/kenzo/luci-app-alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
-rm -rf package/kiddin9/luci-app-openclash
+rm -rf package/kenzo/luci-app-openclash
 git clone --depth=1 --single-branch --branch "master" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
 
 #rm -rf package/kenzo/luci-app-zerotier
 #git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
 
-rm -rf package/kiddin9/luci-app-wechatpush
+rm -rf package/kenzo/luci-app-wechatpush
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 
 rm -rf package/kenzo/luci-app-autotimeset
