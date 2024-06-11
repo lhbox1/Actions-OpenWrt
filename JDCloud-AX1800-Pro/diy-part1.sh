@@ -14,10 +14,10 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-#git clone https://github.com/kenzok8/openwrt-packages package/kenzo
-#git clone https://github.com/kenzok8/small package/small
+git clone https://github.com/kenzok8/openwrt-packages package/kenzo
+git clone https://github.com/kenzok8/small package/small
 
-git clone https://github.com/kiddin9/openwrt-packages package/kiddin9
+#git clone https://github.com/kiddin9/openwrt-packages package/kiddin9
 #git clone https://github.com/yuanzhangyin99/5G-Modem-Support package/yuanzhangyin99
 
 #自定义
@@ -28,9 +28,12 @@ git clone https://github.com/kiddin9/openwrt-packages package/kiddin9
 
 
 #wget -qO- https://github.com/linkease/istore-packages/archive/main.zip > temp.zip
-#unzip -q temp.zip
+wget -qO- https://github.com/kiddin9/openwrt-packages/archive/master.zip > temp.zip
+
+unzip -q temp.zip
 #rm -rf feeds/luci/applications/luci-app-ssr-plus
-#cp -r istore-packages-main/luci-app-zerotier package/
+cp -r openwrt-packages-master/luci-app-zerotier package/
+cp -r openwrt-packages-master/luci-app-autoreboot package/
 #cp -r istore-packages-main/luci-app-vsftpd package/
-#rm -rf temp.zip
-#rm -rf istore-packages-main
+rm -rf temp.zip
+rm -rf openwrt-packages-master
