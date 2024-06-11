@@ -6,7 +6,7 @@ on:
    # - cron: 0 19 * * *
 
 env:
-  REPO_URL: https://github.com/breeze303/openwrt
+  REPO_URL: https://github.com/breeze303/openwrt-6.x
   REPO_BRANCH: main
   CONFIG_FILE: JDCloud-AX1800-Pro/ipq60xx-wifi(emmc).config
   PATCHES_FILE_1: JDCloud-AX1800-Pro/0001-show-soc-status-on-luci.patch
