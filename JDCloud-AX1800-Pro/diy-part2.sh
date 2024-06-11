@@ -14,9 +14,6 @@
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.68.1/g" ./package/base-files/files/bin/config_generate
 
 sed -i "s/hostname='.*'/hostname='AX1800'/g" package/base-files/files/bin/config_generate
-#修改默认时区
-sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
-sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
 
 
 rm -rf package/kenzo/luci-app-adguardhome
@@ -25,9 +22,9 @@ rm -rf package/kenzo/luci-app-alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
 rm -rf package/kenzo/luci-app-openclash
-git clone --depth=1 --single-branch --branch "master" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
+git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git package/kenzo/luci-app-openclash
 
-#rm -rf package/kenzo/luci-app-zerotier
+rm -rf package/kenzo/luci-app-zerotier
 #git clone https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-zerotier package/luci-app-zerotier
 
 rm -rf package/kenzo/luci-app-wechatpush
