@@ -83,25 +83,25 @@ wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
-#wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
-#wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.003-beta > temp.zip
+wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.003-beta > temp.zip
 
-#unzip -q temp.zip
-#cp -r OpenClash-0.46.003-beta/luci-app-openclash package/
-#rm -rf OpenClash-0.46.003-beta
-#rm -rf temp.zip
+unzip -q temp.zip
+cp -r OpenClash-0.46.003-beta/luci-app-openclash package/
+rm -rf OpenClash-0.46.003-beta
+rm -rf temp.zip
 
 #下载使用master版本passwall
-wget -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
-#wget -qO- https://codeload.github.com/xiaorouji/openwrt-passwall/zip/refs/tags/4.77-5 > temp1.zip
+#wget -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
+wget -qO- https://codeload.github.com/xiaorouji/openwrt-passwall/zip/refs/tags/4.77-6 > temp1.zip
 unzip -q temp1.zip
 rm -rf feeds/luci/applications/luci-app-passwall
-cp -r openwrt-passwall-main/luci-app-passwall package/
+#cp -r openwrt-passwall-main/luci-app-passwall package/
 
-#cp -r openwrt-passwall-4.77-5/luci-app-passwall package/
+cp -r openwrt-passwall-4.77-6/luci-app-passwall package/
 rm -rf temp1.zip
-rm -rf openwrt-passwall-main
-#rm -rf openwrt-passwall-4.77-5
+#rm -rf openwrt-passwall-main
+rm -rf openwrt-passwall-4.77-6
 
 
 
@@ -177,8 +177,8 @@ rm -rf luci-app-mosdns-5
 
 
 #下载使用dev版本openclash
-wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
-unzip -q temp.zip
-cp -r OpenClash-dev/luci-app-openclash package/
-rm -rf OpenClash-dev
-rm -rf temp.zip
+#wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
+#unzip -q temp.zip
+#cp -r OpenClash-dev/luci-app-openclash package/
+#rm -rf OpenClash-dev
+#rm -rf temp.zip
