@@ -59,36 +59,37 @@ wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 chmod +x files/etc/openclash/core/clash*
 
 # meta 要GeoIP.dat 和 GeoSite.dat
-#GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
-#GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
-GEOIP_URL="https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
-GEOSITE_URL="https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+#GEOIP_URL="https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+#GEOSITE_URL="https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
 wget -qO- $GEOIP_URL > files/etc/openclash/GeoIP.dat
 wget -qO- $GEOSITE_URL > files/etc/openclash/GeoSite.dat
 
 # Country.mmdb
-#COUNTRY_LITE_URL=https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb
-COUNTRY_LITE_URL=https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
+COUNTRY_LITE_URL=https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb
+#COUNTRY_LITE_URL=https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
 # COUNTRY_FULL_URL=https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/Country.mmdb
 wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 # wget -qO- $COUNTRY_FULL_URL > files/etc/openclash/Country.mmdb
 
 
-#chnr_custom_url="https://ispip.clang.cn/all_cn.txt"
-#chnr6_custom_url="https://ispip.clang.cn/all_cn_ipv6.txt"
+chnr_custom_url="https://ispip.clang.cn/all_cn.txt"
+chnr6_custom_url="https://ispip.clang.cn/all_cn_ipv6.txt"
 #cndomain_custom_url="https://testingcf.jsdelivr.net/gh/felixonmars/dnsmasq-china-list@master/accelerated-domains.china.conf"
-#wget -qO- $chnr_custom_url > files/etc/openclash/china_ip_route.ipset
-#wget -qO- $chnr6_custom_url > files/etc/openclash/china_ip6_route.ipset
+wget -qO- $chnr_custom_url > files/etc/openclash/china_ip_route.ipset
+wget -qO- $chnr6_custom_url > files/etc/openclash/china_ip6_route.ipset
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
 wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
-wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.003-beta > temp.zip
+#wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.003-beta > temp.zip
 
 unzip -q temp.zip
-cp -r OpenClash-0.46.003-beta/luci-app-openclash package/
-rm -rf OpenClash-0.46.003-beta
+cp -r OpenClash-master/luci-app-openclash package/
+
+rm -rf OpenClash-master
 rm -rf temp.zip
 
 #下载使用master版本passwall
