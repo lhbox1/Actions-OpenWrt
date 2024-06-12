@@ -22,7 +22,7 @@
 
 #Open Clash
 
-git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
+git clone --depth=1 --single-branch --branch "master" https://github.com/vernesong/OpenClash.git
 
 #Pass Wall
 #git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git ./pw_luci
@@ -32,7 +32,7 @@ git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/
 #git clone --depth=1 --single-branch --branch "master" https://github.com/kenzok8/openwrt-packages.git
 #git clone --depth=1 --single-branch --branch "master" https://github.com/kenzok8/small.git
 
-git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git
+#git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git
 #git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall2.git
 #git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall-packages.git
 
