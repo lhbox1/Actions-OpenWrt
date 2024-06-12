@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|ssr-plus\|passwall\|alist\|easymesh\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|ssr-plus\|wechatpush\|passwall\|alist\|easymesh\).*")
 
 rm -rf feeds/packages/net/chinadns-ng
 
