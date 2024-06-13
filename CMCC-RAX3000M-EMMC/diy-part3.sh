@@ -17,6 +17,7 @@ rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|wechatpush\|
 
 rm -rf feeds/packages/net/chinadns-ng
 
+rm -rf package/istore
 #rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/ddns-go
 
