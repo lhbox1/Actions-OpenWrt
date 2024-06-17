@@ -60,7 +60,7 @@ git clone https://github.com/lhbox1/pakg.git package/pakggg
 #git clone  https://github.com/sirpdboy/luci-app-lucky package/luci-app-lucky
 
 # 下载源码
-git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+#git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 
