@@ -141,18 +141,18 @@ rm -rf helloworld-master
 
 
 #下载使用sbwml版本mosdns
-wget  -qO- https://github.com/sbwml/luci-app-mosdns/archive/v5.zip > mosdns.zip
+wget  -qO- https://codeload.github.com/sbwml/luci-app-mosdns/zip/refs/tags/v5.3.1 > mosdns.zip
 unzip -q mosdns.zip
 
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
-cp -r luci-app-mosdns-5/luci-app-mosdns package/
-cp -r luci-app-mosdns-5/v2dat package/
-cp -r luci-app-mosdns-5/mosdns package/
+cp -r luci-app-mosdns-5.3.1/luci-app-mosdns package/
+cp -r luci-app-mosdns-5.3.1/v2dat package/
+cp -r luci-app-mosdns-5.3.1/mosdns package/
 rm -rf mosdns.zip
-rm -rf luci-app-mosdns-5
+rm -rf luci-app-mosdns-5.3.1
 
 
 
