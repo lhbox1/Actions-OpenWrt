@@ -1,0 +1,27 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option charset 'UTF-8'
+	option description 'Samba on OpenWRT'
+	option enable_extra_tuning '1'
+	option disable_async_io '1'
+	option allow_legacy_protocols '1'
+	option interface 'lan'
+
+config sambashare
+	option name 'RAX3000M'
+	option path '/mnt/mmcblk0p7/RAX3000M'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0666'
+	option dir_mask '0777'
+	option force_root '1'
+
+config sambashare
+	option name '移动固态'
+	option path '/mnt/sda1'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0666'
+	option dir_mask '0777'
+
