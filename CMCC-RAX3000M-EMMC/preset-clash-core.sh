@@ -58,6 +58,9 @@ wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 # 给内核权限
 chmod +x files/etc/openclash/core/clash*
 
+# 给wan_check权限
+chmod +x files/etc/wan_check.sh
+
 # meta 要GeoIP.dat 和 GeoSite.dat
 GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
 GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
