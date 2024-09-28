@@ -107,7 +107,13 @@ rm -rf temp1.zip
 #rm -rf openwrt-passwall-main
 rm -rf openwrt-passwall-4.78-2
 
-
+#下载使用lucky
+wget  -qO- https://codeload.github.com/gdy666/luci-app-lucky/zip/refs/tags/v2.10.5 > lucky.zip
+unzip -q lucky.zip
+cp -r luci-app-lucky-2.10.5/luci-app-lucky package/
+cp -r luci-app-lucky-2.10.5/lucky package/
+rm -rf lucky.zip
+rm -rf luci-app-lucky-2.10.5
 
 #下载使用helloworld依赖库ssr
 wget -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
