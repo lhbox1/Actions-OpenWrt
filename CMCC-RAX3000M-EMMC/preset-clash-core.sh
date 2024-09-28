@@ -51,8 +51,8 @@ CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/maste
 #wget -qO- $CLASH_TUN_URL > temp.gz && gunzip  temp.gz && mv temp files/etc/openclash/core/clash_tun
 #wget -qO- $CLASH_META_URL > temp.tar.gz && tar xzf temp.tar.gz && mv clash files/etc/openclash/core/clash_meta && rm temp.tar.gz
 
-wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
-wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
+#wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
+#wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
 wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 
 # 给内核权限
