@@ -12,7 +12,7 @@ LOG_FILE="/var/log/auto_restart_wan.log"
 ping_host="www.baidu.com"
 
 log_info() {
-	echo "$(date): INFO : $*" >>"$LOG_FILE"
+	echo "$(date): INFO  : $*" >>"$LOG_FILE"
 }
 log_error() {
 	echo "$(date): ERROR : $*" >>"$LOG_FILE"
