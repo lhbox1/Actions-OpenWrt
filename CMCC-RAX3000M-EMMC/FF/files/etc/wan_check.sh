@@ -29,9 +29,9 @@ if [ "$?" != "0" ]; then
 	log_error "网络错误，即将重启动 WAN 接口"
 
 	# 重启 WAN 接口
-	ifup wan >/dev/null
+	# ifup wan >/dev/null
 	
-	#   /etc/init.d/network restart >/dev/null
+	/etc/init.d/network restart >/dev/null
 	log_info "WAN 接口已重启"
 	sleep 20
 	check_wan
