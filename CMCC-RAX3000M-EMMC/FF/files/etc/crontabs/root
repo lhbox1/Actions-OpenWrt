@@ -1,2 +1,2 @@
-20 5 8 * * sleep 5 && touch /etc/banner && reboot
+18 5 8 * * sleep 5 && touch /etc/banner && reboot
 */5 * * * * /etc/wan_check.sh
