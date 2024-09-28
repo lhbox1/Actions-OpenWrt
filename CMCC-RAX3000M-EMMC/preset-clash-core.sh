@@ -51,8 +51,8 @@ CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/maste
 #wget -qO- $CLASH_TUN_URL > temp.gz && gunzip  temp.gz && mv temp files/etc/openclash/core/clash_tun
 #wget -qO- $CLASH_META_URL > temp.tar.gz && tar xzf temp.tar.gz && mv clash files/etc/openclash/core/clash_meta && rm temp.tar.gz
 
-#wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
-#wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
+wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
+wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
 wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 
 # 给内核权限
@@ -86,13 +86,16 @@ wget -qO- $chnr6_custom_url > files/etc/openclash/china_ip6_route.ipset
 #wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
-wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
-#wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.003-beta > temp.zip
+#wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
+wget -qO- https://github.com/vernesong/OpenClash/archive/refs/tags/v0.46.014-beta.zip > temp.zip
 
 unzip -q temp.zip
-cp -r OpenClash-master/luci-app-openclash package/
+#cp -r OpenClash-master/luci-app-openclash package/
 
-rm -rf OpenClash-master
+cp -r OpenClash-0.46.014-beta/luci-app-openclash package/
+rm -rf OpenClash-0.46.014-beta
+
+#rm -rf OpenClash-master
 rm -rf temp.zip
 
 #下载使用master版本passwall
