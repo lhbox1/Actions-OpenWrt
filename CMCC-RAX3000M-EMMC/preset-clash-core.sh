@@ -87,7 +87,7 @@ wget -qO- $chnr6_custom_url > files/etc/openclash/china_ip6_route.ipset
 
 #下载使用master版本openclash
 #wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
-wget -qO- https://github.com/vernesong/OpenClash/archive/refs/tags/v0.46.014-beta.zip > temp.zip
+wget -qO- https://codeload.github.com/vernesong/OpenClash/zip/refs/tags/v0.46.014-beta > temp.zip
 
 unzip -q temp.zip
 #cp -r OpenClash-master/luci-app-openclash package/
