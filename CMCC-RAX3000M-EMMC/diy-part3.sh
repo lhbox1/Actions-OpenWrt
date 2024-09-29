@@ -13,16 +13,11 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(ddns-go\|openclash\|lucky\|wechatpush\|ssr-plus\|passwall\|alist\|easymesh\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|alist\|easymesh\).*")
 
 rm -rf feeds/packages/net/chinadns-ng
 
 rm -rf package/istore
-#rm -rf feeds/packages/net/smartdns
-rm -rf feeds/packages/net/ddns-go
-
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
@@ -47,34 +42,10 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 
 
 ##添加软件包
-#git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
-
-#git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
-
 git clone https://github.com/lhbox1/pakg.git package/pakggg
-
-#git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-#git clone  https://github.com/sirpdboy/luci-app-lucky package/luci-app-lucky
-
-# 下载源码
-#git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
-
-git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
-
-#alist
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
-#git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
-
-#
-#git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-
 git clone https://github.com/linkease/istore package/nas-istore
 git clone https://github.com/linkease/nas-packages.git package/nas-istore1
 git clone https://github.com/linkease/nas-packages-luci.git package/nas-istore2
-
-#argon主题
-#git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
