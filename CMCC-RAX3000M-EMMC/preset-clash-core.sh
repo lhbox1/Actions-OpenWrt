@@ -110,14 +110,6 @@ rm -rf temp1.zip
 #rm -rf openwrt-passwall-main
 rm -rf openwrt-passwall-4.78-2
 
-#下载使用lucky
-wget  -qO- https://codeload.github.com/gdy666/luci-app-lucky/zip/refs/tags/v2.10.5 > lucky.zip
-unzip -q lucky.zip
-cp -r luci-app-lucky-2.10.5/luci-app-lucky package/
-cp -r luci-app-lucky-2.10.5/lucky package/
-rm -rf lucky.zip
-rm -rf luci-app-lucky-2.10.5
-
 #下载使用helloworld依赖库ssr
 wget -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
 unzip -q temp2.zip
@@ -126,67 +118,22 @@ rm -rf feeds/luci/applications/luci-app-ssr-plus
 cp -r helloworld-master/luci-app-ssr-plus package/
 cp -r helloworld-master/shadow-tls package/
 
-
 rm -rf temp2.zip
 rm -rf helloworld-master
 
-#插件库
-#wget  -qO- https://github.com/lhbox1/pakg/archive/main.zip > temp3.zip
-#unzip -q temp3.zip
-#cp -r pakg-main/luci-app-adguardhome package/
-#cp -r pakg-main/luci-app-mosdns package/
-#cp -r pakg-main/v2dat package/
-#rm -rf temp3.zip
-#rm -rf pakg-main
-
-
-#alist更新
-
-#wget -qO- https://github.com/sbwml/luci-app-alist/archive/master.zip > alist.zip
-#unzip -q alist.zip
-#rm -rf feeds/luci/applications/luci-app-alist
-#cp -r luci-app-alist-master/luci-app-alist package/
-
-#rm -rf alist.zip
-#rm -rf luci-app-alist-master
-
-
-
 #下载使用sbwml版本mosdns
-wget  -qO- https://codeload.github.com/sbwml/luci-app-mosdns/zip/refs/tags/v5.3.1 > mosdns.zip
-unzip -q mosdns.zip
+#wget  -qO- https://codeload.github.com/sbwml/luci-app-mosdns/zip/refs/tags/v5.3.1 > mosdns.zip
+#unzip -q mosdns.zip
 
-rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/v2ray-geodata
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+#rm -rf feeds/packages/net/mosdns
+#rm -rf feeds/packages/net/v2ray-geodata
+#git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
-cp -r luci-app-mosdns-5.3.1/luci-app-mosdns package/
-cp -r luci-app-mosdns-5.3.1/v2dat package/
-cp -r luci-app-mosdns-5.3.1/mosdns package/
-rm -rf mosdns.zip
-rm -rf luci-app-mosdns-5.3.1
-
-
-
-#wget  -qO- https://github.com/xiaorouji/openwrt-passwall-packages/archive/main.zip > temp3.zip
-
-#rm -rf feeds/packages/net/shadowsocks-libe
-#rm -rf feeds/packages/net/xray-core
-#rm -rf feeds/packages/net/chinadns-ng
-
-#cp -r openwrt-passwall2-main/luci-app-passwall2 package/
-#cp -r openwrt-passwall-packages-main/dns2socks package/
-#cp -r openwrt-passwall-packages-main/dns2tcp package/
-#cp -rf openwrt-passwall-packages-main/xray-core feeds/packages/net/
-#cp -rf openwrt-passwall-packages-main/chinadns-ng feeds/packages/net/
-#cp -r openwrt-passwall-packages-main/sing-box package/
-#cp -r openwrt-passwall-packages-main/shadowsocks-rust package/
-#cp -r openwrt-passwall-packages-main/microsocks package/
-
-#rm -rf openwrt-passwall2-main
-#rm -rf openwrt-passwall-packages-main
-
-#rm -rf temp3.zip
+#cp -r luci-app-mosdns-5.3.1/luci-app-mosdns package/
+#cp -r luci-app-mosdns-5.3.1/v2dat package/
+#cp -r luci-app-mosdns-5.3.1/mosdns package/
+#rm -rf mosdns.zip
+#rm -rf luci-app-mosdns-5.3.1
 
 
 #下载使用dev版本openclash
