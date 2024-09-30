@@ -16,7 +16,7 @@
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|alist\|easymesh\|adguardhome\).*")
 
 rm -rf feeds/packages/net/chinadns-ng
-
+rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
 
 #修改默认主机名
