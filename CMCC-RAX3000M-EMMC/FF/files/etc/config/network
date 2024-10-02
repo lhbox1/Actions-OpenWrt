@@ -41,7 +41,6 @@ config device
 
 config interface 'wan'
 	option device 'wan'
-	option device 'eth1'
 	option proto 'pppoe'
 	option username 'nbyza67579792'
 	option password '123456'
