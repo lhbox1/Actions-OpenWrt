@@ -15,7 +15,6 @@ config device
 	list ports 'lan2'
 	list ports 'lan3'
 
-
 config device
 	option name 'lan1'
 	option macaddr 'b8:60:61:79:e6:5c'
