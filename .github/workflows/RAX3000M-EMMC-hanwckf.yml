@@ -121,6 +121,8 @@ jobs:
     - name: 加载config & DIY_P2_SH
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        #
+        [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
