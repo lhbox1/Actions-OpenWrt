@@ -5,7 +5,7 @@
 
 #
 ###############手动修改##############
-name: RAX3000M-EMMC-hanwckf
+name: RAX3000M-EMMC-padavanonly
 
 on:
   repository_dispatch:
