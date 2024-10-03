@@ -30,7 +30,8 @@ on:
 
 env:
   ###############手动修改##############
- 
+  OPENWRT_NAME: padavanonly
+  UPLOAD_TAG_NAME: RAX3000M-EMMC
   #REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   ##237源码
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
