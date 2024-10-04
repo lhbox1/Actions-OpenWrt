@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 
 opkg install /etc/ipk/*.ipk
