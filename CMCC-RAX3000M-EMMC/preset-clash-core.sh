@@ -18,12 +18,7 @@ mkdir -p files/etc/AdGuardHome
 AdGuardHome_URL="https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/AdGuardHome.tar.gz"
 
 
-curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/clash1.tar.gz -o /tmp/clash.tar.gz
-tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
-mv /tmp/clash_meta files/etc/openclash/core/clash_meta >/dev/null 2>&1
-mv /tmp/clash_tun files/etc/openclash/core/clash_tun >/dev/null 2>&1
-mv /tmp/clash files/etc/openclash/core/clash >/dev/null 2>&1
-rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
+
 
 #master分支内核
 # dev内核
@@ -33,10 +28,18 @@ CLASH_TUN_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master
 # Meta内核版本
 CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
 
-#wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
-#wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
-#wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
+#自定义
+#curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/clash1.tar.gz -o /tmp/clash.tar.gz
+#tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
+#mv /tmp/clash_meta files/etc/openclash/core/clash_meta >/dev/null 2>&1
+#mv /tmp/clash_tun files/etc/openclash/core/clash_tun >/dev/null 2>&1
+#mv /tmp/clash files/etc/openclash/core/clash >/dev/null 2>&1
+#rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 
+
+wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
+wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
+wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 wget -qO- $AdGuardHome_URL | tar  xOz > files/etc/AdGuardHome/AdGuardHome
 # 给内核权限
 chmod +x files/etc/openclash/core/clash*
