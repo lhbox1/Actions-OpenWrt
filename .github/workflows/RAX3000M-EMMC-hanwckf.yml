@@ -69,7 +69,7 @@ env:
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
   RAX3000M_EMMC_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
-  CONFIG_FILE: CMCC-RAX3000M-EMMC/my.mtwifi-cfg.config
+  CONFIG_FILE: CMCC-RAX3000M-EMMC/.mtwifi-cfg.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
   DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part2.sh
   SSH_ACTIONS: false
@@ -146,9 +146,9 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         
         #不需要网络配置取消 #
-        #rm -rf openwrt/files/etc/config/network
+        rm -rf openwrt/files/etc/config/network
         
-        [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
+        #[ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
