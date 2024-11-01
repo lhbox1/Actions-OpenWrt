@@ -80,11 +80,11 @@ rm -rf OpenClash-master
 rm -rf temp.zip
 
 #下载使用dev版本openclash
-wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
-unzip -q temp.zip
-cp -r OpenClash-dev/luci-app-openclash package/
-rm -rf OpenClash-dev
-rm -rf temp.zip
+#wget  -qO-  wget https://codeload.github.com/vernesong/OpenClash/zip/refs/heads/dev > temp.zip
+#unzip -q temp.zip
+#cp -r OpenClash-dev/luci-app-openclash package/
+#rm -rf OpenClash-dev
+#rm -rf temp.zip
 
 
 
