@@ -6,7 +6,6 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fd0f:067c:d655::/48'
 
 config device
 	option name 'br-lan'
@@ -17,15 +16,15 @@ config device
 
 config device
 	option name 'lan1'
-	option macaddr 'b8:60:61:79:e6:5c'
+	option macaddr 'b8:60:61:79:e6:1c'
 
 config device
 	option name 'lan2'
-	option macaddr 'b8:60:61:79:e6:5c'
+	option macaddr 'b8:60:61:79:e6:2c'
 
 config device
 	option name 'lan3'
-	option macaddr 'b8:60:61:79:e6:5c'
+	option macaddr 'b8:60:61:79:e6:3c'
 
 config interface 'lan'
 	option device 'br-lan'
@@ -44,10 +43,6 @@ config interface 'wan'
 	option username 'nbyza67579792'
 	option password '123456'
 	option ipv6 'auto'
-	option peerdns '0'
-	list dns '223.5.5.5'
-	list dns '119.29.29.29'
-	list dns '114.114.114.114'
 
 config interface 'wan6'
 	option device 'wan'
