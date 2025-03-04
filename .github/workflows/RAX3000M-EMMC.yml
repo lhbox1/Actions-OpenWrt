@@ -151,23 +151,19 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         
         #根据源码来修改
-        if [[ $REPO_URL != *"hanwckf"* ]] ; then
+        #if [[ $REPO_URL != *"hanwckf"* ]] ; then
         #增加luci界面
         # echo "CONFIG_PACKAGE_luci-app-ksmbd=n" >> openwrt/.config
         
-        else
-        [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
-        mv CMCC-RAX3000M-EMMC/install_ipk.sh openwrt/files/etc/install_ipk.sh
-        rm -rf openwrt/files/etc/ipk/kernel_5.4.255-1-71d39ab23054c352744e74fe3a674e50_aarch64_cortex-a53.ipk
-        rm -rf openwrt/files/etc/opkg
+        #else
+        #[ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
+        #mv CMCC-RAX3000M-EMMC/install_ipk.sh openwrt/files/etc/install_ipk.sh
+        #rm -rf openwrt/files/etc/ipk/kernel_5.4.255-1-71d39ab23054c352744e74fe3a674e50_aarch64_cortex-a53.ipk
+        #rm -rf openwrt/files/etc/opkg
+        #fi
 
-        
-        fi
-
-        #不需要网络配置取消 #
+        #不需要网络配置取消
         rm -rf openwrt/files/etc/config/network
-        
-        
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
