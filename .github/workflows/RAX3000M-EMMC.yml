@@ -165,7 +165,7 @@ jobs:
         fi
 
         #不需要网络配置取消 #
-        # rm -rf openwrt/files/etc/config/network
+        rm -rf openwrt/files/etc/config/network
         
         
         chmod +x $DIY_P2_SH
