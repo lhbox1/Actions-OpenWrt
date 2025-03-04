@@ -36,5 +36,5 @@ sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
 
 ##添加软件包
-git clone https://github.com/lhbox1/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
 
