@@ -12,10 +12,10 @@
 
 # 预置openclash和AdGuardHome内核
 mkdir -p files/etc/openclash/core
-mkdir -p files/etc/AdGuardHome
+#mkdir -p files/etc/AdGuardHome
 
 # AdGuardHome内核
-AdGuardHome_URL="https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/AdGuardHome.tar.gz"
+#AdGuardHome_URL="https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/AdGuardHome.tar.gz"
 
 
 
@@ -43,7 +43,7 @@ wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 wget -qO- $AdGuardHome_URL | tar  xOz > files/etc/AdGuardHome/AdGuardHome
 # 给内核权限
 chmod +x files/etc/openclash/core/clash*
-chmod +x files/etc/AdGuardHome/AdGuardHome
+#chmod +x files/etc/AdGuardHome/AdGuardHome
 # 给wan_check权限
 chmod +x files/etc/wan_check.sh
 chmod +x files/etc/install_ipk.sh
@@ -91,15 +91,15 @@ rm -rf temp.zip
 
 #下载使用master版本passwall
 #wget -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
-wget -qO- https://codeload.github.com/xiaorouji/openwrt-passwall/zip/refs/tags/4.78-4 > temp1.zip
+wget -qO- https://codeload.github.com/xiaorouji/openwrt-passwall/zip/refs/tags/25.3.2-1 > temp1.zip
 unzip -q temp1.zip
 rm -rf feeds/luci/applications/luci-app-passwall
 #cp -r openwrt-passwall-main/luci-app-passwall package/
 
-cp -r openwrt-passwall-4.78-4/luci-app-passwall package/
+cp -r openwrt-passwall-25.3.2-1/luci-app-passwall package/
 rm -rf temp1.zip
 #rm -rf openwrt-passwall-main
-rm -rf openwrt-passwall-4.78-4
+rm -rf openwrt-passwall-25.3.2-1
 
 #下载使用helloworld依赖库ssr
 wget -qO- https://github.com/fw876/helloworld/archive/master.zip > temp2.zip
@@ -125,3 +125,12 @@ rm -rf helloworld-master
 #cp -r luci-app-mosdns-5.3.1/mosdns package/
 #rm -rf mosdns.zip
 #rm -rf luci-app-mosdns-5.3.1
+
+#下载使用lucky
+wget  -qO- https://codeload.github.com/gdy666/luci-app-lucky/zip/refs/tags/v2.15.7 > lucky.zip
+unzip -q lucky.zip
+cp -r luci-app-lucky-2.15.7/luci-app-lucky package/
+cp -r luci-app-lucky-2.15.7/lucky package/
+rm -rf lucky.zip
+rm -rf luci-app-lucky-2.15.7
+
