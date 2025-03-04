@@ -13,13 +13,14 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|ksmbd\|alist\|easymesh\|adguardhome\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\).*")
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/hysteria
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
+rm -rf feeds/packages/net/lucky
 
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
