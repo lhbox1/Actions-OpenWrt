@@ -45,10 +45,9 @@ on:
 ## REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
 env:
   ###############手动修改##############
-  OPENWRT_NAME: hanwckf
-  
+  # OPENWRT_NAME: hanwckf
   # REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
-  
+  OPENWRT_NAME: padavanonly
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
  
   REPO_BRANCH: openwrt-21.02
