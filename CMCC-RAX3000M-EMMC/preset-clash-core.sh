@@ -12,10 +12,10 @@
 
 # 预置openclash和AdGuardHome内核
 mkdir -p files/etc/openclash/core
-#mkdir -p files/etc/AdGuardHome
+mkdir -p files/etc/AdGuardHome
 
 # AdGuardHome内核
-#AdGuardHome_URL="https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/AdGuardHome.tar.gz"
+AdGuardHome_URL="https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/AdGuardHome.tar.gz"
 
 
 
@@ -40,10 +40,10 @@ CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/maste
 #wget -qO- $CLASH_DEV_URL | tar  xOz > files/etc/openclash/core/clash
 #wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
 wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
-#wget -qO- $AdGuardHome_URL | tar  xOz > files/etc/AdGuardHome/AdGuardHome
+wget -qO- $AdGuardHome_URL | tar  xOz > files/etc/AdGuardHome/AdGuardHome
 # 给内核权限
 chmod +x files/etc/openclash/core/clash*
-#chmod +x files/etc/AdGuardHome/AdGuardHome
+chmod +x files/etc/AdGuardHome/AdGuardHome
 # 给wan_check权限
 chmod +x files/etc/wan_check.sh
 chmod +x files/etc/install_ipk.sh
