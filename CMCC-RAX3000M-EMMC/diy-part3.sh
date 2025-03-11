@@ -15,6 +15,7 @@
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\).*")
 rm -rf feeds/packages/net/sing-box
+rm -rf feeds/packages/net/v2ray-plugin
 rm -rf feeds/packages/net/hysteria
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/chinadns-ng
@@ -47,8 +48,11 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 ##添加软件包
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
-git clone https://github.com/lhbox1/pakg.git package/pakggg
-git clone https://github.com/lhbox1/ipkk.git package/ipkk
+
+git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+
+#git clone https://github.com/lhbox1/pakg.git package/pakggg
+#git clone https://github.com/lhbox1/ipkk.git package/ipkk
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 git clone https://github.com/linkease/istore package/nas-istore
 git clone https://github.com/linkease/nas-packages.git package/nas-istore1
