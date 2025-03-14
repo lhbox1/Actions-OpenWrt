@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\|smartdns\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\).*")
 #passwall
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/v2ray-plugin
@@ -34,7 +34,7 @@ rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
 rm -rf feeds/packages/net/lucky
-rm -rf feeds/packages/net/smartdns
+
 
 
 
