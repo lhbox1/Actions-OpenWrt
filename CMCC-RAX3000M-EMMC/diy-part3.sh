@@ -25,7 +25,7 @@ rm -rf feeds/packages/net/dns2socks
 rm -rf feeds/packages/net/ipt2socks
 rm -rf feeds/packages/net/microsocks
 rm -rf feeds/packages/net/shadowsocks-libev
-rm -rf feeds/packages/net/shadowsocks-rust
+#rm -rf feeds/packages/net/shadowsocks-rust
 rm -rf feeds/packages/net/shadowsocksr-libev
 rm -rf feeds/packages/net/simple-obfs
 rm -rf feeds/packages/net/trojan-plus
