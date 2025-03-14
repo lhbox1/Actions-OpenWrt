@@ -63,12 +63,12 @@ on:
 env:
   ###############手动修改##############
   ##因为是两个设备，所以手动设置上传时候的打包名称和tag名称UPLOAD_TAG_NAME
-  #OPENWRT_NAME: padavanonly
+  OPENWRT_NAME: padavanonly
   ##237源码
-  #REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
   
-  OPENWRT_NAME: hanwckf
-  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
+  #OPENWRT_NAME: hanwckf
+  #REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   
   UPLOAD_TAG_NAME: rax3000m-emmc
   REPO_BRANCH: openwrt-21.02
@@ -163,7 +163,8 @@ jobs:
         #fi
 
         #不需要网络配置取消
-        rm -rf openwrt/files/etc/config/network
+        #rm -rf openwrt/files/etc/config/network
+        
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
