@@ -29,5 +29,7 @@
 git clone https://github.com/fw876/helloworld package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
+rm -rf package/helloworld/xray-core
+rm -rf package/openwrt-passwall/xray-core
 rm -rf package/helloworld/shadowsocks-rust
 rm -rf package/openwrt-passwall/shadowsocks-rust
