@@ -67,7 +67,7 @@ git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatp
 
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 #git clone https://github.com/lhbox1/pakg.git package/pakggg
-#git clone https://github.com/lhbox1/ipkk.git package/ipkk
+git clone https://github.com/lhbox1/ipkk.git package/ipkk
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 git clone https://github.com/linkease/istore package/nas-istore
 git clone https://github.com/linkease/nas-packages.git package/nas-istore1
