@@ -35,7 +35,7 @@ rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
 rm -rf feeds/packages/net/lucky
 
-
+rm -rf feeds/packages/net/alist
 
 
 #修改默认主机名
