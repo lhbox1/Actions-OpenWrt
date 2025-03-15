@@ -15,7 +15,9 @@
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\|ddns-go\).*")
 #passwall
-
+rm -rf feeds/packages/net/sing-box
+rm -rf feeds/packages/net/trojan-plus
+rm -rf feeds/packages/net/chinadns-ng
 ##
 rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
