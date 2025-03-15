@@ -5,7 +5,7 @@
 
 #
 ###############手动修改##############
-name: RAX3000M-EMMC-padavanonly
+name: RAX3000M-EMMC-23.5-padavanonly
 
 on:
   repository_dispatch:
@@ -34,12 +34,12 @@ env:
   UPLOAD_TAG_NAME: RAX3000M-EMMC
   #REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   ##237源码
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-23.05
   
   REPO_BRANCH: openwrt-21.02
-  FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
+  #FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
   RAX3000M_EMMC_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
-  CONFIG_FILE: CMCC-RAX3000M-EMMC/my.mtwifi-cfg.config
+  CONFIG_FILE: CMCC-RAX3000M-EMMC/.mtwifi-cfg.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
   DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part3.sh
   CLASH_SH: CMCC-RAX3000M-EMMC/preset-clash-core.sh
@@ -97,7 +97,7 @@ jobs:
     - name: 加载feeds.conf.default & DIY_P1_SH
       run: |
         [ -e $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files ] && mv $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files openwrt/files
-        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
+        #[ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
