@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\|ddns-go\).*")
 #passwall
 
 ##
@@ -22,7 +22,7 @@ rm -rf package/istore
 rm -rf feeds/packages/net/lucky
 
 rm -rf feeds/packages/net/alist
-
+rm -rf feeds/packages/net/ddns-go
 
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
@@ -52,6 +52,8 @@ git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-e
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 #git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
+
+git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/linkease/istore package/nas-istore
 git clone https://github.com/linkease/nas-packages.git package/nas-istore1
 git clone https://github.com/linkease/nas-packages-luci.git package/nas-istore2
