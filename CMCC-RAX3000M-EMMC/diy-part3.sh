@@ -51,7 +51,7 @@ git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adgua
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 #git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
-git clon https://github.com/sbwml/luci-app-alist package/luci-app-alist
+git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 git clone https://github.com/linkease/istore package/nas-istore
 git clone https://github.com/linkease/nas-packages.git package/nas-istore1
 git clone https://github.com/linkease/nas-packages-luci.git package/nas-istore2
