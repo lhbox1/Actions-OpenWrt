@@ -13,23 +13,9 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ssr-plus\|passwall\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\).*")
 #passwall
-rm -rf feeds/packages/net/sing-box
-rm -rf feeds/packages/net/v2ray-plugin
-rm -rf feeds/packages/net/hysteria
-rm -rf feeds/packages/net/xray-core
-rm -rf feeds/packages/net/chinadns-ng
-rm -rf feeds/packages/net/dns2tcp
-rm -rf feeds/packages/net/dns2socks
-rm -rf feeds/packages/net/ipt2socks
-rm -rf feeds/packages/net/microsocks
-rm -rf feeds/packages/net/shadowsocks-libev
-rm -rf feeds/packages/net/shadowsocks-rust
-rm -rf feeds/packages/net/shadowsocksr-libev
-rm -rf feeds/packages/net/simple-obfs
-rm -rf feeds/packages/net/trojan-plus
-rm -rf feeds/packages/net/v2ray-geodata
+
 ##
 rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
@@ -64,8 +50,6 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
-
-git clone https://github.com/lhbox1/openwrt-passwall-packages
 #git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 git clon https://github.com/sbwml/luci-app-alist package/luci-app-alist
 git clone https://github.com/linkease/istore package/nas-istore
