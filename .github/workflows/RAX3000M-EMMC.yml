@@ -157,6 +157,7 @@ jobs:
         echo "CONFIG_PACKAGE_luci-theme-argon" >> openwrt/.config
         echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> openwrt/.config
         [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
+        rm -rf openwrt/package/luci-app-wechatpush
         rm -rf openwrt/files/etc/install_ipk.sh
         rm -rf openwrt/files/etc/ipk
         rm -rf openwrt/files/etc/opkg
