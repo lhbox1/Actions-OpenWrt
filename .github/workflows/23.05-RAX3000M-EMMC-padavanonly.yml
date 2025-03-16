@@ -36,7 +36,7 @@ env:
   ##237源码
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
   
-  REPO_BRANCH: 24.10
+  REPO_BRANCH: openwrt-23.05
   #FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
   RAX3000M_EMMC_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
   CONFIG_FILE: CMCC-RAX3000M-EMMC/mt7981-ax3000-2305.config
@@ -91,8 +91,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        #git clone $REPO_URL -b $REPO_BRANCH openwrt
-        git clone $REPO_URL openwrt
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        #git clone $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: 加载feeds.conf.default & DIY_P1_SH
