@@ -63,12 +63,12 @@ on:
 env:
   ###############手动修改##############
   ##因为是两个设备，所以手动设置上传时候的打包名称和tag名称UPLOAD_TAG_NAME
-  OPENWRT_NAME: padavanonly
+  #OPENWRT_NAME: padavanonly
   ##237源码
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
+  #REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
   
-  #OPENWRT_NAME: hanwckf
-  #REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
+  OPENWRT_NAME: hanwckf
+  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   
   UPLOAD_TAG_NAME: rax3000m-emmc
   REPO_BRANCH: openwrt-21.02
@@ -151,16 +151,16 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         
         #根据源码来修改
-        #if [[ $REPO_URL != *"hanwckf"* ]] ; then
+        if [[ $REPO_URL == *"hanwckf"* ]] ; then
         #增加luci界面
-        # echo "CONFIG_PACKAGE_luci-app-ksmbd=n" >> openwrt/.config
-        
-        #else
-        #[ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
-        #mv CMCC-RAX3000M-EMMC/install_ipk.sh openwrt/files/etc/install_ipk.sh
-        #rm -rf openwrt/files/etc/ipk/kernel_5.4.255-1-71d39ab23054c352744e74fe3a674e50_aarch64_cortex-a53.ipk
-        #rm -rf openwrt/files/etc/opkg
-        #fi
+        echo "CONFIG_PACKAGE_luci-theme-argon" >> openwrt/.config
+        echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> openwrt/.config
+        [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
+        rm -rf openwrt/files/etc/install_ipk.sh
+        rm -rf openwrt/files/etc/ipk
+        rm -rf openwrt/files/etc/opkg
+        sed -i "s/install_ipk.sh/wan_check.sh/g" openwrt/files/etc/crontabs/root
+        fi
 
         #不需要网络配置取消
         #rm -rf openwrt/files/etc/config/network
