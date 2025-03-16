@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\|ddns-go\|ssr-plus\|oaf\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\|ddns-go\|ssr-plus\).*")
 #passwall
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/trojan-plus
@@ -27,7 +27,7 @@ rm -rf feeds/packages/net/lucky
 
 rm -rf feeds/packages/net/alist
 rm -rf feeds/packages/net/ddns-go
-rm -rf feeds/packages/net/oaf
+#rm -rf feeds/packages/net/oaf
 
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
@@ -57,7 +57,7 @@ git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-e
 git clone https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 git clone https://github.com/lhbox1/pakg.git package/pakggg
-git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+#git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 
 git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/linkease/istore package/nas-istore
