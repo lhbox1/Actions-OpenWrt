@@ -153,6 +153,7 @@ jobs:
         #根据源码来修改
         if [[ $REPO_URL == *"hanwckf"* ]] ; then
         #增加luci界面
+        sed -i '/CONFIG_PACKAGE_luci-app-wechatpush=y/d' openwrt/.config
         echo "CONFIG_PACKAGE_luci-theme-argon" >> openwrt/.config
         echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> openwrt/.config
         [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
