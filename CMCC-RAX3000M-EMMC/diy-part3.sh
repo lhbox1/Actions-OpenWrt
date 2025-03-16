@@ -34,6 +34,9 @@ sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/co
 
 #修改默认IP地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.15.1/g" ./package/base-files/files/bin/config_generate
+
+#修改immortalwrt.lan关联IP
+sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.15.1/g" $(find feeds/luci/modules/luci-mod-system -type f -name "flash.js")
 ##-----------------Add OpenClash dev core------------------
 # curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 # tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
