@@ -155,16 +155,18 @@ jobs:
         if [[ $REPO_URL == *"hanwckf"* ]] ; then
         #增加luci界面
         sed -i '/CONFIG_PACKAGE_luci-app-wechatpush=y/d' openwrt/.config
-        echo "CONFIG_PACKAGE_luci-theme-argon" >> openwrt/.config
-        echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> openwrt/.config
+        #echo "CONFIG_PACKAGE_luci-theme-argon" >> openwrt/.config
+        #echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> openwrt/.config
         [ -e CMCC-RAX3000M-EMMC/network ] && mv CMCC-RAX3000M-EMMC/network openwrt/files/etc/config/network
         [ -e CMCC-RAX3000M-EMMC/AdGuardHome ] && mv CMCC-RAX3000M-EMMC/AdGuardHome openwrt/files/etc/config/AdGuardHome
         
+        #rm -rf openwrt/files/etc/install_ipk.sh
         rm -rf openwrt/package/luci-app-wechatpush
-        rm -rf openwrt/files/etc/install_ipk.sh
-        rm -rf openwrt/files/etc/ipk
+        rm -rf openwrt/files/etc/ipk/kernel_5.4.255-1-71d39ab23054c352744e74fe3a674e50_aarch64_cortex-a53.ipk
         rm -rf openwrt/files/etc/opkg
-        sed -i "s/install_ipk.sh/wan_check.sh/g" openwrt/files/etc/crontabs/root
+        #sed -i "s/install_ipk.sh/wan_check.sh/g" openwrt/files/etc/crontabs/root
+        sed -i '/sed -i "s/kernel (.*)/kernel (= 5.4.255-1-71d39ab23054c352744e74fe3a674e50)/g" /usr/lib/opkg/status/d' openwrt/files/etc/install_ipk.sh
+        echo "ln -s /mnt/mmcblk0p7/AdGuardHome /usr/bin/AdGuardHome" >> openwrt/files/etc/install_ipk.sh
         fi
 
         #不需要网络配置取消
