@@ -8,16 +8,6 @@ config global
 	option check_fs '0'
 
 config mount
-	option target '/overlay'
-	option uuid 'd31bbd94-3366-42b9-b687-5be730ebf9d2'
-	option enabled '0'
-
-config mount
-	option target '/rom'
-	option uuid '82c8dd27-7e0cf4a1-b3894b55-61d5c085'
-	option enabled '0'
-
-config mount
 	option target '/mnt/mmcblk0p7'
 	option uuid 'adb4ba9f-fb8b-45dc-b25e-7fc3872b0658'
 	option enabled '1'
