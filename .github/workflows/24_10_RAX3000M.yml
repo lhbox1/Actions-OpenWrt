@@ -38,7 +38,7 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
   REPO_BRANCH: openwrt-24.10
   # FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
-  CONFIG_FILE: CMCC-RAX3000M-EMMC/.mtwifi-cfg.config
+  CONFIG_FILE: CMCC-RAX3000M-EMMC/24-10-ax3000.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
   DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part2.sh
   SSH_ACTIONS: false
