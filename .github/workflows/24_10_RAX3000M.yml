@@ -49,7 +49,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: Ubuntu 24.04
 
     permissions:
       contents: write
