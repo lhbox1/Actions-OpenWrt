@@ -28,12 +28,12 @@ rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 ##预置OpenClash内核和GEO数据
 curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/Country.mmdb https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
 curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
-curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoIP.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
+# curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoIP.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
 
 ##-----------------Delete DDNS's examples-----------------
-sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
+# sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 ##-----------------Manually set CPU frequency for MT7981B-----------------
-sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
+# sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
 
 ##添加软件包
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
