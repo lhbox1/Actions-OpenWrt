@@ -30,6 +30,7 @@ curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/Coun
 curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
 # curl -sfL -o /feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoIP.dat https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
 
+chmod +x /files/etc/wan_check.sh
 ##-----------------Delete DDNS's examples-----------------
 # sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 ##-----------------Manually set CPU frequency for MT7981B-----------------
