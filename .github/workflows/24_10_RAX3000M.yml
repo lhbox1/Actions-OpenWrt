@@ -36,7 +36,7 @@ env:
   OPENWRT_NAME: padavanonly
   UPLOAD_TAG_NAME: rax3000m-emmc
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
-  REPO_BRANCH: openwrt-24.10
+  REPO_BRANCH: 2410
   # FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
   CONFIG_FILE: CMCC-RAX3000M-EMMC/24-10-ax3000.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
