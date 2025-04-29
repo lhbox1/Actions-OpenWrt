@@ -37,5 +37,10 @@ chmod +x /files/etc/wan_check.sh
 # sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
 
 ##添加软件包
+
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(alist\|ssr-plus\).*")
+
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
+git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
+git clone https://github.com/sbwml/luci-app-mosdns.git package/luci-app-mosdns
 
