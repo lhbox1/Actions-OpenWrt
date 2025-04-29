@@ -1,5 +1,5 @@
 #每月定时重启路由器
 11 1 11 * * sleep 5 && touch /etc/banner && reboot
 #每15分钟检测网络，重启WAN
-*/15 * * * * /etc/install_ipk.sh
+*/15 * * * * /etc/wan_check.sh
 ##################################################
