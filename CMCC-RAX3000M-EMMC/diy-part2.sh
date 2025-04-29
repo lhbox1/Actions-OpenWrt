@@ -43,7 +43,10 @@ git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/l
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(alist\|ssr-plus\).*")
 
-git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
+
+git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/nikki
+
+git clone https://github.com/lhbox1/luci-app-adguardhome1.git package/luci-app-adguardhome
 git clone https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 git clone https://github.com/sbwml/luci-app-mosdns.git package/luci-app-mosdns
 
