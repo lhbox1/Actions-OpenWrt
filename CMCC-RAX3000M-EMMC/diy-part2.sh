@@ -37,6 +37,9 @@ chmod +x /files/etc/wan_check.sh
 # sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="1.3GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
 
 ##添加软件包
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(alist\|ssr-plus\).*")
 
