@@ -31,10 +31,10 @@ COUNTRY_LITE_URL=https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/re
 wget -qO- $COUNTRY_LITE_URL > files/etc/openclash/Country.mmdb
 chnr_custom_url="https://ispip.clang.cn/all_cn.txt"
 chnr6_custom_url="https://ispip.clang.cn/all_cn_ipv6.txt"
-cndomain_custom_url="https://testingcf.jsdelivr.net/gh/felixonmars/dnsmasq-china-list@master/accelerated-domains.china.conf"
+#cndomain_custom_url="https://testingcf.jsdelivr.net/gh/felixonmars/dnsmasq-china-list@master/accelerated-domains.china.conf"
 wget -qO- $chnr_custom_url > files/etc/openclash/china_ip_route.ipset
 wget -qO- $chnr6_custom_url > files/etc/openclash/china_ip6_route.ipset
-wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
+#wget -qO- $cndomain_custom_url > files/etc/openclash/accelerated-domains.china.conf
 
 #下载使用master版本openclash
 wget -qO- https://github.com/vernesong/OpenClash/archive/master.zip > temp.zip
