@@ -15,8 +15,7 @@ mkdir -p files/etc/openclash/core
 
 #master分支内核
 # Meta内核版本
-CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
-
+CLASH_META_URL="https://raw.githubusercontent.com/lhbox1/Actions-OpenWrt/main/CMCC-RAX3000M-EMMC/clash_meta.tar.gz"
 wget -qO- $CLASH_META_URL | tar xOz > files/etc/openclash/core/clash_meta
 # 给内核权限
 chmod +x files/etc/openclash/core/clash*
