@@ -13,7 +13,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|openclash\|ksmbd\|alist\|easymesh\|adguardhome\|lucky\|wechatpush\|ddns-go\|ssr-plus\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|lucky\|openclash\|alist\).*")
 #passwall
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/trojan-plus
@@ -26,17 +26,16 @@ rm -rf package/istore
 rm -rf feeds/packages/net/lucky
 
 rm -rf feeds/packages/net/alist
-rm -rf feeds/packages/net/ddns-go
 #rm -rf feeds/packages/net/oaf
 
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
 
 #修改默认IP地址
-sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.15.1/g" ./package/base-files/files/bin/config_generate
+# sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.15.1/g" ./package/base-files/files/bin/config_generate
 
 #修改immortalwrt.lan关联IP
-sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.15.1/g" $(find feeds/luci/modules/luci-mod-system -type f -name "flash.js")
+# sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.15.1/g" $(find feeds/luci/modules/luci-mod-system -type f -name "flash.js")
 ##-----------------Add OpenClash dev core------------------
 # curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 # tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
