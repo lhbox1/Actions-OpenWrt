@@ -14,6 +14,9 @@
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|lucky\|openclash\|alist\).*")
+rm -rf feeds/packages/net/{alist,mosdns,smartdns}
+rm -rf feeds/packages/utils/v2dat
+
 #passwall
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/trojan-plus
@@ -34,6 +37,7 @@ rm -rf feeds/packages/net/tuic-client
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/v2ray-plugin
 rm -rf feeds/packages/net/xray-plugin
+
 
 
 ##
