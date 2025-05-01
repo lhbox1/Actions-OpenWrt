@@ -14,8 +14,8 @@
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|lucky\|openclash\|alist\).*")
-rm -rf feeds/packages/net/{alist,mosdns,smartdns}
-rm -rf feeds/packages/utils/v2dat
+#rm -rf feeds/packages/net/{alist,mosdns,smartdns}
+#rm -rf feeds/packages/utils/v2dat
 
 #passwall
 rm -rf feeds/packages/net/sing-box
