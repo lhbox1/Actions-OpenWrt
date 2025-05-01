@@ -63,3 +63,18 @@ cp -r luci-app-lucky-2.15.7/lucky package/
 rm -rf lucky.zip
 rm -rf luci-app-lucky-2.15.7
 
+
+#下载使用mosdns
+git clone --depth=1 --single-branch --branch "master" https://github.com/kenzok8/small.git ./small
+git clone --depth=1 --single-branch --branch "master" https://github.com/kenzok8/openwrt-packages.git ./small-openwrt-packages
+
+cp -r small/luci-app-mosdns package/
+cp -r small/v2dat package/
+cp -r small/mosdns package/
+
+cp -r small-openwrt-packages/luci-app-smartdns package/
+cp -r small-openwrt-packages/smartdns package/
+
+rm -rf small-openwrt-packages
+rm -rf small
+
