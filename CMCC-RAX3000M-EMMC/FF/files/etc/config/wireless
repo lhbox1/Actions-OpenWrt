@@ -31,7 +31,6 @@ config wifi-device 'MT7981_1_2'
 	option htmode 'HE160'
 	option country 'CN'
 	option mu_beamformer '1'
-	option noscan '0'
 	option serialize '1'
 	option channel '60'
 
