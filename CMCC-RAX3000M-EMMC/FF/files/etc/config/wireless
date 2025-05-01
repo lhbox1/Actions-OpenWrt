@@ -33,7 +33,7 @@ config wifi-device 'MT7981_1_2'
 	option mu_beamformer '1'
 	option noscan '0'
 	option serialize '1'
-	option channel '157'
+	option channel '60'
 
 config wifi-iface 'default_MT7981_1_2'
 	option device 'MT7981_1_2'
