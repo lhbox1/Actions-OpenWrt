@@ -7,7 +7,7 @@ config alist
 	option delayed_start '666'
 	option bin_dir '/mnt/mmcblk0p7/alist/alist'
 	option data_dir '/mnt/mmcblk0p7/alist'
-	option temp_dir '/mnt/mmcblk0p7/alist/tmp'
+	option temp_dir '/tmp/alist'
 	option allow_wan '0'
 	option port '5244'
 	option log '0'
