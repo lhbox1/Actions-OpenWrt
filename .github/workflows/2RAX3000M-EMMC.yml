@@ -89,31 +89,7 @@ env:
 
 
 jobs:
-  create-matrix:
-    runs-on: ubuntu-latest
-    name: Create Matrix
-    steps:
-      - name: Set Matrix
-        id: set-matrix
-        env:
-          MATRIXS: ${{ github.event.inputs.devices }}
-        run: |
-          if [ -z $MATRIXS ]; then
-            MATRIXS='["rax3000m-emmc"]'
-          fi
-          echo "matrix=$MATRIXS" >> $GITHUB_OUTPUT
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }} 
-
-
   build:
-    needs: create-matrix
-    strategy:
-      #max-parallel: 1
-      fail-fast: false
-      matrix:
-        device: ${{ fromJSON(needs.create-matrix.outputs.matrix) }}
-
     runs-on: ubuntu-latest
     timeout-minutes: 1000
 
