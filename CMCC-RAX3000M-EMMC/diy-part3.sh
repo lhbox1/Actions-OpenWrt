@@ -14,8 +14,8 @@
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
 rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|lucky\|openclash\|alist\).*")
-#rm -rf feeds/packages/net/{alist,mosdns,smartdns}
-#rm -rf feeds/packages/utils/v2dat
+rm -rf feeds/packages/net/{adguardhome,lucky,alist,mosdns,smartdns}
+rm -rf feeds/packages/utils/v2dat
 
 #passwall
 rm -rf feeds/packages/net/sing-box
@@ -41,12 +41,7 @@ rm -rf feeds/packages/net/xray-plugin
 
 
 ##
-rm -rf feeds/packages/net/adguardhome
 rm -rf package/istore
-rm -rf feeds/packages/net/lucky
-
-rm -rf feeds/packages/net/alist
-#rm -rf feeds/packages/net/oaf
 
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='RAX3000M_E'/g" package/base-files/files/bin/config_generate
