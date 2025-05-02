@@ -152,6 +152,8 @@ jobs:
         echo "CONFIG_PACKAGE_luci-app-ksmbd=y" >> openwrt/.config
         echo "CONFIG_PACKAGE_luci-app-usbmodem=y" >> openwrt/.config
         rm -rf openwrt/files/etc/config/samba4
+        [ -e CMCC-RAX3000M-EMMC/ksmbd ] && mv CMCC-RAX3000M-EMMC/ksmbd openwrt/files/etc/config/ksmbd
+        
         fi
         #不需要网络配置取消
         #rm -rf openwrt/files/etc/config/network
