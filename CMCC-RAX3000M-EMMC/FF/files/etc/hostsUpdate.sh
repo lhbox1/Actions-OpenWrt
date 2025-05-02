@@ -13,4 +13,4 @@ cat /etc/hostsnew >> /etc/hosts
  #   /etc/init.d/openclash start
 # fi
 
-#  13 3 * * * /root/hostsUpdate.sh
+#  13 3 * * * /etc/hostsUpdate.sh
