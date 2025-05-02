@@ -22,6 +22,7 @@ chmod +x files/etc/openclash/core/clash*
 # 给wan_check权限
 chmod +x files/etc/wan_check.sh
 chmod +x files/etc/install_ipk.sh
+chmod +x files/etc/hostsUpdate.sh
 # GeoSite.dat
 GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 wget -qO- $GEOSITE_URL > files/etc/openclash/GeoSite.dat
