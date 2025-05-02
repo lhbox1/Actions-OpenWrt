@@ -3,5 +3,5 @@
 #每10分钟检测网络，重启WAN
 */10 * * * * /etc/install_ipk.sh
 #github-host
-13 3 * * * /root/hostsUpdate.sh
+13 3 * * * /etc/hostsUpdate.sh
 ##################################
