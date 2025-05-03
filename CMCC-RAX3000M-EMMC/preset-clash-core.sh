@@ -46,14 +46,14 @@ rm -rf temp.zip
 
 #下载使用master版本passwall
 #wget -qO- https://github.com/xiaorouji/openwrt-passwall/archive/main.zip > temp1.zip
-wget -qO- https://codeload.github.com/xiaorouji/openwrt-passwall/zip/refs/tags/25.5.1-2 > temp1.zip
+wget -qO- https://codeload.github.com/xiaorouji/openwrt-passwall/zip/refs/tags/25.5.2-1 > temp1.zip
 unzip -q temp1.zip
 #cp -r openwrt-passwall-main/luci-app-passwall package/
 
-cp -r openwrt-passwall-25.5.1-2/luci-app-passwall package/
+cp -r openwrt-passwall-25.5.2-1/luci-app-passwall package/
 rm -rf temp1.zip
 #rm -rf openwrt-passwall-main
-rm -rf openwrt-passwall-25.5.1-2
+rm -rf openwrt-passwall-25.5.2-1
 
 
 #下载使用lucky
