@@ -8,30 +8,10 @@ on:
         description: 'Set LAN IP Address'
         required: true
         default: '192.168.15.1'
-      WIFI_DRIVER:
-        description: 'Choose WiFi Driver'
-        required: true
-        default: 'v7.6.7.2-fw-20240823(recommend)'
-        type: choice
-        options:
-        - v7.6.7.2-fw-20240823(recommend)
-        - v7.6.6.1-fw-20230306(recommend)
-        - v7.6.7.2-fw-default
-        - v7.6.7.2-fw-20230306
-        - v7.6.7.2-fw-20230330
-        - v7.6.7.2-fw-20230411
-        - v7.6.7.2-fw-20230717
-        - v7.6.7.2-fw-20231024
-        - v7.6.6.1-fw-default
-        - v7.6.6.1-fw-20230330
-        - v7.6.6.1-fw-20230411
-        - v7.6.6.1-fw-20230717
-        - v7.6.6.1-fw-20231024
-        - v7.6.6.1-fw-20240823
       EEPROM:
-        description: 'Use nx30pro eeprom and fixed WiFi MAC address'
+        description: 'hanwckf固件高功率'
         required: true
-        default: true
+        default: false
         type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
