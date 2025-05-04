@@ -169,13 +169,13 @@ jobs:
         else
             echo "Invalid IP address, use default."
         fi
-    - name: 使用nx30pro的高功率eeprom并固定WiFi MAC地址
-      if: github.event.inputs.EEPROM == 'true' &&
+    - name: 使用hanwckf的高功率eeprom并固定WiFi MAC地址
+      if: github.event.inputs.EEPROM == 'true'
       run: |
         cd openwrt
         sed -i 's/CONFIG_MTK_MT_WIFI_MT7981_20240823=y/CONFIG_MTK_MT_WIFI_MT7981_DEFAULT_FIRMWARE=y/g' .config
         cp $GITHUB_WORKSPACE/eeprom/mt79xx_20231229-4012a0_eeprom.tar.xz dl/mt79xx_20231229-4012a0.tar.xz
-        echo "Use WiFi Driver: $wifi_driver-fw-$firmware"
+        echo "Use WiFi Driver: v7.6.7.2-fw-20240823(recommend)"
         
         ## 创建一个辅助文件。文件内容是写入MAC地址到dat文件，固定wifi MAC地址
         echo -e "\t\tlocal wifi0_mac=\"\$(mmc_get_mac_binary factory 0x04)\"
