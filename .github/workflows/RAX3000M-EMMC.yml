@@ -35,17 +35,18 @@ env:
   ##因为是两个设备，所以手动设置上传时候的打包名称和tag名称UPLOAD_TAG_NAME
   
   ##237源码
-  # OPENWRT_NAME: padavanonly
-  # REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
+  OPENWRT_NAME: padavanonly
+  CONFIG_FILE: CMCC-RAX3000M-EMMC/mt7981-ax3000-mtwifi-cfg.config
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
   ##hanwckf源码
-  OPENWRT_NAME: hanwckf
-  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
+  #OPENWRT_NAME: hanwckf
+  #CONFIG_FILE: CMCC-RAX3000M-EMMC/.2mtwifi-cfg.config
+  #REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   
   UPLOAD_TAG_NAME: rax3000m-emmc
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: CMCC-RAX3000M-EMMC/feeds.conf.default
   RAX3000M_EMMC_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
-  CONFIG_FILE: CMCC-RAX3000M-EMMC/.2mtwifi-cfg.config
   DIY_P1_SH: CMCC-RAX3000M-EMMC/diy-part1.sh
   DIY_P2_SH: CMCC-RAX3000M-EMMC/diy-part3.sh
   SSH_ACTIONS: false
