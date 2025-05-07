@@ -3,8 +3,6 @@ config samba
 	option workgroup 'WORKGROUP'
 	option charset 'UTF-8'
 	option description 'Samba on OpenWRT'
-	option enable_extra_tuning '1'
-	option disable_async_io '1'
 	option allow_legacy_protocols '1'
 	option interface 'lan'
 
