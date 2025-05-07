@@ -1,27 +1,24 @@
 
 config dnsmasq
 	option domainneeded '1'
-	option boguspriv '1'
-	option filterwin2k '0'
 	option localise_queries '1'
 	option rebind_protection '1'
 	option rebind_localhost '1'
 	option local '/lan/'
 	option domain 'lan'
 	option expandhosts '1'
-	option nonegcache '0'
 	option authoritative '1'
 	option readethers '1'
 	option leasefile '/tmp/dhcp.leases'
-	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
-	option nonwildcard '1'
 	option localservice '1'
-	option filter_aaaa '0'
-	option cachesize '8000'
 	option mini_ttl '3600'
 	option dns_redirect '1'
 	option ednspacket_max '1232'
 	option localuse '1'
+	option cachesize '8000'
+	option port '53'
+	list server '127.0.0.1#5336'
+	option noresolv '1'
 
 config dhcp 'lan'
 	option interface 'lan'
@@ -43,4 +40,20 @@ config odhcpd 'odhcpd'
 	option leasefile '/tmp/hosts/odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 	option loglevel '4'
+
+config host
+	option mac 'E0:94:67:7A:54:9A'
+	option ip '192.168.15.177'
+
+config host
+	option mac 'AC:7C:02:9C:E9:99'
+	option ip '192.168.15.99'
+
+config host
+	option mac 'AC:BB:61:E5:FC:88'
+	option ip '192.168.15.88'
+
+config host
+	option mac 'FA:DA:F2:47:7E:C3'
+	option ip '192.168.15.166'
 

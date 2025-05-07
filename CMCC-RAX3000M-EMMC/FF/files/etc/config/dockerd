@@ -4,7 +4,7 @@ config globals 'globals'
 	option iptables '1'
 	option remote_endpoint '0'
 	option data_root '/mnt/mmcblk0p7/docker/'
-	list registry_mirrors 'https://gh.09888888.xyz'
+	list registry_mirrors 'https://docker.09888888.xyz'
 
 config firewall 'firewall'
 	option device 'docker0'
