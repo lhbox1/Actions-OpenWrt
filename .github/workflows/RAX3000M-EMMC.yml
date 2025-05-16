@@ -76,8 +76,8 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
+        sudo mkdir -p /mnt/workdir
+        sudo chown $USER:$GROUPS /mnt/workdir
     - name: 清理磁盘空间(Ubuntu)
       uses: jlumbroso/free-disk-space@main
       with:
@@ -94,11 +94,11 @@ jobs:
         swap-storage: false
 
     - name: 下载固件源码
-      working-directory: /workdir
+      working-directory: /mnt/workdir
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /mnt/workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: 加载feeds.conf.default & DIY_P1_SH
       run: |
         [ -e $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files ] && mv $GITHUB_WORKSPACE/CMCC-RAX3000M-EMMC/FF/files openwrt/files
