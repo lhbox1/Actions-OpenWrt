@@ -4,7 +4,7 @@
 #删除冲突插件
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\|passwall\|ssr-plus\|smartdns\).*")
 
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|lucky\|easymesh\|openclash\|alist\|smartdns\|adguardhome\).*")
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(passwall\|lucky\|easymesh\|openclash\|alist\|smartdns\|adguardhome\|ksmbd\).*")
 rm -rf feeds/packages/net/{adguardhome,lucky,alist,mosdns,smartdns}
 rm -rf feeds/packages/utils/v2dat
 
