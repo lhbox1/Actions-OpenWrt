@@ -138,9 +138,9 @@ jobs:
         
         rm -rf openwrt/files/etc/ipk/kernel_5.4.255-1-71d39ab23054c352744e74fe3a674e50_aarch64_cortex-a53.ipk
         rm -rf openwrt/files/etc/opkg
-        #else
-        #echo "CONFIG_PACKAGE_luci-app-ksmbd=y" >> openwrt/.config
-        #echo "CONFIG_PACKAGE_luci-app-usbmodem=y" >> openwrt/.config
+        else
+        echo "CONFIG_PACKAGE_luci-app-ksmbd=n" >> openwrt/.config
+        echo "CONFIG_PACKAGE_luci-app-usbmodem=y" >> openwrt/.config
         #rm -rf openwrt/files/etc/config/samba4
         #[ -e CMCC-RAX3000M-EMMC/ksmbd ] && mv CMCC-RAX3000M-EMMC/ksmbd openwrt/files/etc/config/ksmbd
         
