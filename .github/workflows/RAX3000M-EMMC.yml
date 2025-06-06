@@ -35,13 +35,13 @@ env:
   ##因为是两个设备，所以手动设置上传时候的打包名称和tag名称UPLOAD_TAG_NAME
   
   ##237源码
-  #OPENWRT_NAME: padavanonly
-  #CONFIG_FILE: CMCC-RAX3000M-EMMC/mt7981-ax3000-mtwifi-cfg.config
-  #REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
+  OPENWRT_NAME: padavanonly
+  CONFIG_FILE: CMCC-RAX3000M-EMMC/mt7981-ax3000-mtwifi-cfg.config
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
   ##hanwckf源码
-  OPENWRT_NAME: hanwckf
-  CONFIG_FILE: CMCC-RAX3000M-EMMC/.2mtwifi-cfg.config
-  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
+  #OPENWRT_NAME: hanwckf
+  #CONFIG_FILE: CMCC-RAX3000M-EMMC/.2mtwifi-cfg.config
+  #REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   
   UPLOAD_TAG_NAME: rax3000m-emmc
   REPO_BRANCH: openwrt-21.02
