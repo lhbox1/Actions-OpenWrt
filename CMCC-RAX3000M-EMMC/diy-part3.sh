@@ -54,7 +54,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/l
 git clone https://github.com/lhbox1/luci-app-adguardhome1 package/luci-app-adguardhome
 git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-easymesh
 
-git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
+#git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
 #git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 git clone https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
