@@ -13,7 +13,7 @@ config mount
 	option enabled '1'
 
 config mount
-	option target '/mnt/sda1'
-	option uuid 'FA40-BDBE'
 	option enabled '1'
+	option uuid '6E3B-0448'
+	option target '/mnt/sda1'
 
