@@ -57,7 +57,7 @@ git clone https://github.com/shuishihan/luci-app-easymesh.git package/luci-app-e
 #git clone https://github.com/lmq8267/luci-app-alist package/luci-app-alist
 
 #git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
-git clone https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
+git clone https://github.com/sbwml/luci-app-openlist2 package/luci-app-openlist
    
 
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
